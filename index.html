@@ -548,6 +548,21 @@
     .skin-info-grid { grid-template-columns: 1fr; gap: 14px; }
   }
 
+  /* ── ONLYOU FULL-WIDTH CARD ─────────────────────────────── */
+  .onlyou-card {
+    margin-top: 20px;
+  }
+  .onlyou-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+    align-items: start;
+  }
+  .onlyou-benefits { margin-top: 4px; }
+  @media (max-width: 600px) {
+    .onlyou-inner { grid-template-columns: 1fr; gap: 16px; }
+  }
+
   /* ── MAKEUP APPLICATION ORDER ───────────────────────────── */
   .makeup-order-wrap { display: flex; flex-direction: column; gap: 16px; }
 
@@ -1762,6 +1777,34 @@
 
   </div><!-- /makeup cards-grid -->
 
+  <!-- ONLYOU — full-width card -->
+  <div class="card onlyou-card">
+    <div class="onlyou-inner">
+      <div class="onlyou-left">
+        <span class="card-emoji">✨</span>
+        <span class="card-brand">ONLYOU</span>
+        <div class="card-title">Concealer Brightening &amp; Isolating BB Cream</div>
+        <p class="card-desc">A multitasking 3-in-1 BB cream that combines the coverage of a concealer, the brightening effect of a base, and the protecting barrier of an isolating primer — all in one lightweight step. Ideal for sensitized skin that needs simplicity without sacrificing a polished finish.</p>
+        <div class="tags">
+          <span class="tag purple">3-in-1</span>
+          <span class="tag blue">Brightening</span>
+          <span class="tag gold">Concealer + BB</span>
+          <span class="tag">Isolating Primer</span>
+        </div>
+      </div>
+      <ul class="benefits-list onlyou-benefits">
+        <li>Concealer pigments precisely target dark circles, blemish marks &amp; redness spots</li>
+        <li>BB formula evens overall complexion with a natural, skin-like finish</li>
+        <li>Isolating (primer) base creates a protective barrier between skincare and makeup</li>
+        <li>Brightening agents (niacinamide &amp; vitamin derivatives) visibly enhance radiance</li>
+        <li>Lightweight, buildable coverage that sits comfortably on sensitized skin</li>
+        <li>Worn alone over SPF for an effortless no-makeup look</li>
+        <li>Layered under cushion foundation for amplified coverage and longer wear</li>
+        <li>Fingertip-tap for spot concealing, or blend all over as a full BB base</li>
+      </ul>
+    </div>
+  </div>
+
 
   <!-- ── MAKEUP APPLICATION ORDER ── -->
   <div class="section-header" style="margin-top:48px;">
@@ -1780,6 +1823,18 @@
     <div class="makeup-step-row">
       <div class="makeup-order-num">1</div>
       <div class="makeup-order-content">
+        <div class="makeup-order-title">Spot Conceal &amp; Prime — ONLYOU BB Cream</div>
+        <div class="makeup-order-desc">
+          <p>After skincare has fully absorbed, apply the <strong>ONLYOU Concealer Brightening &amp; Isolating BB Cream</strong> first. Use a fingertip to tap a small amount directly onto any redness spots, dark circles, or blemish marks and gently pat to blend. Then take a slightly larger amount and press all over the face for an even, brightened base.</p>
+          <p><strong>Why first?</strong> The isolating primer function in this product creates a protective barrier between your skincare and subsequent makeup layers — it helps everything sit better, last longer, and prevents makeup from sinking into pores. Applying it before foundation is the correct layering order for 3-in-1 BB creams.</p>
+          <p><strong>Minimal day option:</strong> Worn alone over SPF, the ONLYOU BB provides a polished, naturally brightened finish without any additional base needed.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="makeup-step-row">
+      <div class="makeup-order-num">2</div>
+      <div class="makeup-order-content">
         <div class="makeup-order-title">Choose Your Base — Skin Tint (Light Day) or Cushion Foundation (Full Day)</div>
         <div class="makeup-order-desc">
           <p><strong>Option A — No-Makeup Day:</strong> Apply <strong>ESQA Minimalist Blurring Serum Skin Tint</strong> in Vanilla with fingertips or a damp beauty sponge. Warm a pea-sized amount between fingers and press outward from center. Build a second layer only where coverage is needed (redness spots, around nose).</p>
@@ -1790,7 +1845,7 @@
     </div>
 
     <div class="makeup-step-row">
-      <div class="makeup-order-num">2</div>
+      <div class="makeup-order-num">3</div>
       <div class="makeup-order-content">
         <div class="makeup-order-title">Set with Translucent Loose Powder — Second Date</div>
         <div class="makeup-order-desc">
@@ -1801,7 +1856,7 @@
     </div>
 
     <div class="makeup-step-row">
-      <div class="makeup-order-num">3</div>
+      <div class="makeup-order-num">4</div>
       <div class="makeup-order-content">
         <div class="makeup-order-title">Finish & Lock</div>
         <div class="makeup-order-desc">
