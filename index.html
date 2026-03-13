@@ -219,6 +219,22 @@
 
   .subheading{font-family:'Playfair Display',serif;color:var(--sky);font-size:1.1rem;margin:24px 0 14px;font-weight:600}
 
+  /* ── SUITABILITY BLOCK ── */
+  .suitability{margin-top:14px;border-top:1px solid var(--border);padding-top:12px;display:flex;flex-direction:column;gap:8px}
+  .suit-row{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+  .suit-label{font-size:.68rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--text3);flex-shrink:0;min-width:72px}
+  .suit-rating{display:inline-flex;align-items:center;gap:5px;padding:3px 11px;border-radius:20px;font-size:.72rem;font-weight:700;letter-spacing:.03em}
+  .suit-excellent{background:#d4f5e4;color:#1a6640}
+  .suit-good{background:#d6eaf8;color:#1a4a76}
+  .suit-caution{background:#fdebd0;color:#935200}
+  [data-theme="dark"] .suit-excellent{background:#0d2a1a;color:#4aad78}
+  [data-theme="dark"] .suit-good{background:#102038;color:#5a9fd4}
+  [data-theme="dark"] .suit-caution{background:#2a1800;color:#e09040}
+  .suit-tag{display:inline-block;padding:2px 9px;border-radius:10px;font-size:.69rem;font-weight:500;background:var(--tag-bg);color:var(--tag-text);margin:2px 2px 0 0}
+  .suit-note{font-size:.75rem;color:var(--text3);line-height:1.5;font-style:italic}
+  .suit-warn{font-size:.74rem;color:#c0602a;line-height:1.5;font-weight:500}
+  [data-theme="dark"] .suit-warn{color:#e07840}
+
   footer{text-align:center;padding:40px 20px 60px;color:var(--text3);font-size:.78rem;border-top:1px solid var(--divider);margin-top:20px}
   footer span{color:var(--sky)}
 
@@ -525,6 +541,11 @@
       <ul class="benefits-list"><li>Maintains skin's natural pH — prevents barrier disruption post-cleanse</li><li>Snail mucin boosts healing and hydration simultaneously</li><li>Centella Asiatica reduces redness and calms reactive skin</li><li>Removes impurities, light makeup, and sebum gently</li><li>Non-stripping — no tight feeling after washing</li></ul>
     </div>
     <div class="how-to"><div class="how-to-title">How to Apply</div><p>Wet face with lukewarm water. Lather gently in palms, massage in circular motions for 30–60 seconds. Rinse thoroughly, pat dry. Use morning and/or evening.</p></div>
+    <div class="suitability">
+      <div class="suit-row"><span class="suit-label">Suitability</span><span class="suit-rating suit-excellent">🟢 Excellent for Sensitized Skin</span></div>
+      <div class="suit-row"><span class="suit-label">Addresses</span><span class="suit-tag">Barrier disruption</span><span class="suit-tag">Redness</span><span class="suit-tag">Inflammation</span><span class="suit-tag">Dryness post-cleanse</span><span class="suit-tag">Sebum &amp; impurities</span></div>
+      <div class="suit-note">Low pH of ~5.5 preserves the acid mantle — one of the most important factors for sensitized skin recovery. Snail mucin and Cica make this a multi-tasking cleanser that treats while it cleans. Safe from Phase 1 onward.</div>
+    </div>
   </div>
 
   <div class="product-card">
@@ -534,6 +555,11 @@
       <ul class="benefits-list"><li>PHA gently removes dead skin without AHA/BHA irritation</li><li>Panthenol (B5) soothes and hydrates the skin barrier</li><li>Amino acids support skin's NMF for lasting moisture retention</li><li>Suitable for sensitive and reactive skin once barrier stabilises</li><li>Leaves skin soft and comfortable — never tight</li></ul>
     </div>
     <div class="how-to"><div class="how-to-title">How to Apply</div><p>Evening use (Phase 2+). Wet skin, apply small amount, cleanse for 45–60 seconds. Rinse, pat dry. Reintroduce in Phase 2; daily use in Phase 3.</p></div>
+    <div class="suitability">
+      <div class="suit-row"><span class="suit-label">Suitability</span><span class="suit-rating suit-good">🔵 Good — Phase 2 &amp; 3 Only</span></div>
+      <div class="suit-row"><span class="suit-label">Addresses</span><span class="suit-tag">Dead skin buildup</span><span class="suit-tag">Texture</span><span class="suit-tag">Mild exfoliation</span><span class="suit-tag">Residue removal</span></div>
+      <div class="suit-warn">⚠️ Not suitable in Phase 1 — even PHA is an acid and can aggravate a compromised barrier in the early SOS stage. Wait until redness and stinging have resolved before introducing this cleanser.</div>
+    </div>
   </div>
 
   <div class="product-card">
@@ -543,6 +569,11 @@
       <ul class="benefits-list"><li>Ceramides restore and reinforce the skin barrier during cleansing</li><li>Hyaluronic Acid maintains hydration throughout the cleanse</li><li>Prebiotic complex nurtures good bacteria to reduce reactivity</li><li>Amino acids strengthen the NMF for better moisture retention</li><li>Priority pick in Phase 1 and for dry/stressed skin days</li></ul>
     </div>
     <div class="how-to"><div class="how-to-title">How to Apply</div><p>Morning focus, especially in Phase 1. Gentle 30-second cleanse. Rinse with cool-to-lukewarm water, pat dry.</p></div>
+    <div class="suitability">
+      <div class="suit-row"><span class="suit-label">Suitability</span><span class="suit-rating suit-excellent">🟢 Excellent — Phase 1 Hero Cleanser</span></div>
+      <div class="suit-row"><span class="suit-label">Addresses</span><span class="suit-tag">Barrier damage (TEWL)</span><span class="suit-tag">Extreme dryness</span><span class="suit-tag">Microbiome imbalance</span><span class="suit-tag">Reactivity</span></div>
+      <div class="suit-note">The only cleanser in your collection that actively deposits ceramides and HA back onto skin while cleansing — making it uniquely suited for Phase 1. The prebiotic complex also helps restore a healthy skin microbiome, which is frequently disrupted in sensitized skin. Best choice when skin is at its most compromised.</div>
+    </div>
   </div>
 
   <h3 class="subheading">✦ Toner</h3>
@@ -553,6 +584,11 @@
       <ul class="benefits-list"><li>Rebalances skin pH after cleansing for better absorption</li><li>Snail mucin speeds up skin cell regeneration and repair</li><li>Niacinamide gently brightens and minimizes pores</li><li>Allantoin calms inflammation and promotes healthy cell turnover</li><li>First hydration layer — the Prep Phase anchor</li><li>Reduces post-inflammation marks over time</li></ul>
     </div>
     <div class="how-to"><div class="how-to-title">How to Apply</div><p>After cleansing, press and pat into skin with palms. Morning: 2–3 layers. Evening: 5–7 layers (7-skin method). Allow each layer ~30 sec to absorb.</p></div>
+    <div class="suitability">
+      <div class="suit-row"><span class="suit-label">Suitability</span><span class="suit-rating suit-excellent">🟢 Excellent for Sensitized Skin</span></div>
+      <div class="suit-row"><span class="suit-label">Addresses</span><span class="suit-tag">Post-cleanse pH imbalance</span><span class="suit-tag">Redness</span><span class="suit-tag">Dehydration</span><span class="suit-tag">PIH (dark marks)</span><span class="suit-tag">Slow cell repair</span></div>
+      <div class="suit-note">The combination of snail mucin and Cica is exceptionally well-tolerated by sensitized skin. Niacinamide at a toner concentration is gentle enough to be non-irritating while still delivering brightening benefits over time. Safe for all phases, including Phase 1.</div>
+    </div>
   </div>
 
   <h3 class="subheading">✦ Serum / Ampoule</h3>
@@ -563,6 +599,11 @@
       <ul class="benefits-list"><li>Madecassoside clinically proven to reduce inflammation and redness</li><li>Asiaticoside promotes collagen synthesis and wound healing</li><li>Creates a thin protective film against environmental irritants</li><li>Deeply calming for post-sun exposure, breakouts, and flares</li><li>Strengthens skin barrier with consistent use over 4+ weeks</li><li>No fragrance, parabens, or alcohol — safe for Phase 1</li></ul>
     </div>
     <div class="how-to"><div class="how-to-title">How to Apply</div><p>After toner. 2–4 drops, warm between fingertips, press gently over entire face. Focus on reactive areas. AM + PM use recommended across all phases.</p></div>
+    <div class="suitability">
+      <div class="suit-row"><span class="suit-label">Suitability</span><span class="suit-rating suit-excellent">🟢 Excellent — #1 Product for Sensitized Skin</span></div>
+      <div class="suit-row"><span class="suit-label">Addresses</span><span class="suit-tag">Active inflammation</span><span class="suit-tag">Redness flares</span><span class="suit-tag">Barrier damage</span><span class="suit-tag">Slow wound healing</span><span class="suit-tag">Environmental damage</span><span class="suit-tag">Post-sun irritation</span></div>
+      <div class="suit-note">100% Centella with no fragrance, no alcohol, and no unnecessary additives — this is the purest, safest active treatment in your entire collection. Clinically studied for compromised skin conditions. The single most important treatment product for sensitized skin and the cornerstone of every phase of your recovery.</div>
+    </div>
   </div>
 
   <h3 class="subheading">✦ Moisturizers</h3>
@@ -573,6 +614,11 @@
       <ul class="benefits-list"><li>Capsule tech releases actives on contact for better efficacy</li><li>Niacinamide fades dark spots and evens skin tone</li><li>Stable Vitamin C brightens without L-Ascorbic Acid irritation</li><li>Centella soothes while brightening agents work</li><li>Perfect lightweight morning moisturizer under SPF</li></ul>
     </div>
     <div class="how-to"><div class="how-to-title">How to Apply</div><p>Morning use after ampoule. Pearl-sized amount pressed gently (don't rub). Wait 1–2 min before SPF. Phase 2 (reintroduce) → Phase 3 (daily AM).</p></div>
+    <div class="suitability">
+      <div class="suit-row"><span class="suit-label">Suitability</span><span class="suit-rating suit-good">🔵 Good — Phase 2 &amp; 3, Patch Test First</span></div>
+      <div class="suit-row"><span class="suit-label">Addresses</span><span class="suit-tag">Dullness</span><span class="suit-tag">Uneven skin tone</span><span class="suit-tag">PIH (dark marks)</span><span class="suit-tag">Dehydration</span></div>
+      <div class="suit-warn">⚠️ Contains a Vitamin C derivative — even stable forms can cause mild tingling in very reactive skin. Always patch test before first use. Do not use in Phase 1 when the barrier is most compromised. If tingling persists after 2–3 uses, discontinue and revisit in Phase 3.</div>
+    </div>
   </div>
 
   <div class="product-card">
@@ -582,6 +628,11 @@
       <ul class="benefits-list"><li>Triple ceramide complex reinforces skin barrier from within</li><li>Cholesterol + fatty acids recreate the skin's own lipid structure</li><li>Dramatically reduces Trans-Epidermal Water Loss (TEWL)</li><li>Creates lasting hydration that doesn't evaporate post-application</li><li>Essential PM product across every phase</li></ul>
     </div>
     <div class="how-to"><div class="how-to-title">How to Apply</div><p>Evening priority. After ampoule, on slightly damp skin. Press generously into face and neck. Be liberal — this is when barrier does its deepest repair work.</p></div>
+    <div class="suitability">
+      <div class="suit-row"><span class="suit-label">Suitability</span><span class="suit-rating suit-excellent">🟢 Excellent — Barrier Repair Essential</span></div>
+      <div class="suit-row"><span class="suit-label">Addresses</span><span class="suit-tag">TEWL (moisture loss)</span><span class="suit-tag">Lipid barrier damage</span><span class="suit-tag">Chronic dryness</span><span class="suit-tag">Skin fragility</span><span class="suit-tag">Environmental reactivity</span></div>
+      <div class="suit-note">Ceramides, cholesterol, and fatty acids in the same ratio found in healthy human skin — this is textbook barrier repair in a jar. Dermatologists frequently recommend this ingredient combination as the gold standard for compromised skin. Non-irritating across all sensitization phases.</div>
+    </div>
   </div>
 
   <div class="product-card">
@@ -591,6 +642,11 @@
       <ul class="benefits-list"><li>Multi-molecular HA hydrates multiple skin layers simultaneously</li><li>Ceramides lock moisture in for extended hydration</li><li>Panthenol (B5) soothes irritation and accelerates repair</li><li>Light enough for daytime, nourishing enough for nights</li><li>Moisture sandwich: Hyalucera first + Glad2Glow on top (PM)</li></ul>
     </div>
     <div class="how-to"><div class="how-to-title">How to Apply</div><p>Apply on damp skin within 60 sec of toner/ampoule. AM or PM. On very dry Phase 1 nights: Hyalucera THEN Glad2Glow on top for moisture sandwich effect.</p></div>
+    <div class="suitability">
+      <div class="suit-row"><span class="suit-label">Suitability</span><span class="suit-rating suit-excellent">🟢 Excellent for Sensitized Skin</span></div>
+      <div class="suit-row"><span class="suit-label">Addresses</span><span class="suit-tag">Dehydration</span><span class="suit-tag">Plumping fine lines</span><span class="suit-tag">Barrier support</span><span class="suit-tag">Tightness &amp; discomfort</span></div>
+      <div class="suit-note">Multi-molecular HA is exceptionally gentle — it is naturally found in human skin and rarely causes reactions even in the most sensitized states. The addition of ceramides makes this more than just a hydrator; it actively supports barrier function. Suitable from Phase 1 onward and pairs perfectly with the Glad2Glow ceramide cream.</div>
+    </div>
   </div>
 
   <div class="product-card">
@@ -600,6 +656,11 @@
       <ul class="benefits-list"><li>Gel texture absorbs quickly — perfect morning pre-SPF layer</li><li>Ceramides protect the barrier without heavy occlusion</li><li>Glycerin draws moisture from air to skin</li><li>Peptides support collagen and skin structure</li><li>Controls excess oil while maintaining barrier health</li><li>Non-comedogenic — safe for sensitized acne-prone skin</li></ul>
     </div>
     <div class="how-to"><div class="how-to-title">How to Apply</div><p>Morning routine. Press and smooth over face, creates a smooth pre-SPF canvas. On oily evenings, substitute for heavier cream. Phase 2–3.</p></div>
+    <div class="suitability">
+      <div class="suit-row"><span class="suit-label">Suitability</span><span class="suit-rating suit-good">🔵 Good — Best for Oily/Combo Sensitized Skin</span></div>
+      <div class="suit-row"><span class="suit-label">Addresses</span><span class="suit-tag">Excess sebum</span><span class="suit-tag">Dehydration</span><span class="suit-tag">Barrier thinning</span><span class="suit-tag">Heavy feeling under makeup</span></div>
+      <div class="suit-note">Ideal for those whose sensitized skin also leans oily or combination — a common pairing. The gel format provides ceramide barrier support without the heaviness that can trigger breakouts on oily-sensitized skin. Introduce in Phase 2 to ensure barrier is stable enough to handle an AM-only gel rather than a richer cream.</div>
+    </div>
   </div>
 
   <h3 class="subheading">✦ Sun Protection</h3>
@@ -610,6 +671,11 @@
       <ul class="benefits-list"><li>Physical UV filters gentler than chemical alternatives</li><li>Zinc Oxide: broad-spectrum UVA + UVB + anti-inflammatory</li><li>Immediately effective — no activation wait needed</li><li>Centella and Niacinamide soothe and brighten simultaneously</li><li>Safe to use daily even during active Phase 1 flare-ups</li></ul>
     </div>
     <div class="how-to"><div class="how-to-title">How to Apply</div><p>Final skincare step every morning. Apply ¼ tsp (two finger lengths) for the face. Press gently — don't rub. Wait 5–10 minutes before makeup. Every phase, every single day.</p></div>
+    <div class="suitability">
+      <div class="suit-row"><span class="suit-label">Suitability</span><span class="suit-rating suit-excellent">🟢 Excellent — The Best SPF Choice for Sensitized Skin</span></div>
+      <div class="suit-row"><span class="suit-label">Addresses</span><span class="suit-tag">UV-induced barrier damage</span><span class="suit-tag">Inflammation from sun</span><span class="suit-tag">Post-inflammatory redness</span><span class="suit-tag">Premature skin ageing</span></div>
+      <div class="suit-note">Physical (mineral) SPF is the dermatologist-recommended choice for sensitized skin. Zinc Oxide and Titanium Dioxide sit on top of skin and physically deflect UV rays — no chemical absorption, no irritation risk. Zinc Oxide additionally has natural anti-inflammatory properties that actively calm sensitized skin while protecting it. No safer daily SPF choice exists for your condition.</div>
+    </div>
   </div>
 
   <div class="product-card">
@@ -619,6 +685,11 @@
       <ul class="benefits-list"><li>Spray delivery allows reapplication over makeup without smudging</li><li>Maintains SPF throughout a long day</li><li>Lightweight mist that refreshes skin mid-day</li><li>Dermatologist-formulated — safe for sensitized skin</li><li>Essential reapplication tool from Phase 1 onward</li></ul>
     </div>
     <div class="how-to"><div class="how-to-title">Mid-Day Reapplication</div><p>Hold 15–20cm away, close eyes, spray evenly over face and neck. Pat gently with fingertips to press in without disturbing makeup. Every 2 hours outdoors.</p></div>
+    <div class="suitability">
+      <div class="suit-row"><span class="suit-label">Suitability</span><span class="suit-rating suit-good">🔵 Good — Dermatologist-Formulated Reapplication</span></div>
+      <div class="suit-row"><span class="suit-label">Addresses</span><span class="suit-tag">SPF maintenance</span><span class="suit-tag">UV protection gaps</span><span class="suit-tag">Mid-day barrier exposure</span></div>
+      <div class="suit-warn">⚠️ Spray sunscreens often contain higher levels of alcohol for quick-dry delivery — which can be drying and irritating on sensitized skin. This formula is dermatologist-developed to minimise this, but if you notice any stinging or increased dryness on application, press only a very light mist from further away and follow immediately with a tiny amount of the Ceramic Gel on dry patches.</div>
+    </div>
   </div>
 </div>
 </section>
@@ -641,6 +712,11 @@
       <ul class="benefits-list"><li>Cushion puff presses product rather than dragging on sensitized skin</li><li>Buildable coverage — one layer natural, two layers fuller</li><li>Dewy-glow finish for a healthy, skin-like appearance</li><li>Skincare ingredients maintain skin hydration during wear</li><li>Comfortable all-day wear without heaviness</li></ul>
     </div>
     <div class="how-to"><div class="how-to-title">How to Apply</div><p>After SPF sets (5–10 min). Press puff into cushion, press-and-roll from center outward. Build in thin layers — never drag. Phase 2 (test) → Phase 3 (daily use).</p></div>
+    <div class="suitability">
+      <div class="suit-row"><span class="suit-label">Suitability</span><span class="suit-rating suit-good">🔵 Good — Phase 2 &amp; 3, Always Patch Test</span></div>
+      <div class="suit-row"><span class="suit-label">Addresses</span><span class="suit-tag">Uneven skin tone</span><span class="suit-tag">Redness visibility</span><span class="suit-tag">Dehydration during wear</span></div>
+      <div class="suit-warn">⚠️ Cushion foundations can contain fragrance, silicones, and preservatives that may not suit all sensitized skin. Always patch test on your inner arm for 24 hours before first full-face use. The "Cover Glow" formula has a glow finish — if skin is prone to excess oil, the dewy finish may amplify shine and trigger mid-day reapplication needs.</div>
+    </div>
   </div>
 
   <div class="product-card">
@@ -650,6 +726,11 @@
       <ul class="benefits-list"><li>SPF 40 PA+++ — bonus sun protection layer over your base SPF</li><li>Hyaluronic Acid keeps skin plump and comfortable throughout the day</li><li>Niacinamide helps manage redness that shows through light coverage</li><li>Matte-satin finish holds up all day</li><li>Lighter formula — breathes better on sensitized skin</li></ul>
     </div>
     <div class="how-to"><div class="how-to-title">How to Apply</div><p>Press-and-roll technique. Tip: Use Skintific for glowy base layer, TIRTIR on top for longevity. Or alternate daily. Phase 2 (reintroduce) → Phase 3 (full use).</p></div>
+    <div class="suitability">
+      <div class="suit-row"><span class="suit-label">Suitability</span><span class="suit-rating suit-good">🔵 Good — Better Tolerated than Many Cushions</span></div>
+      <div class="suit-row"><span class="suit-label">Addresses</span><span class="suit-tag">Redness coverage</span><span class="suit-tag">Skin tone unevenness</span><span class="suit-tag">Dehydration during wear</span><span class="suit-tag">UV exposure (SPF 40)</span></div>
+      <div class="suit-note">TIRTIR's formula includes Niacinamide and HA which actively support sensitized skin during wear — making it a smarter choice than average cushion foundations for your condition. The matte-satin finish is less likely to emphasise pores or patches than a full dewy finish. The bonus SPF 40 PA+++ means extra UV protection, which is especially important for sensitized skin recovery.</div>
+    </div>
   </div>
 
   <div class="product-card">
@@ -659,6 +740,11 @@
       <ul class="benefits-list"><li>Lightest coverage — best for good skin days and reactive periods</li><li>Blurring agents minimize pore appearance without heavy coverage</li><li>Serum formula actively treats skin while worn</li><li>Skin-friendly enough for Phase 1 flare-up days</li><li>Ideal first base layer under heavier cushion in Phase 2–3</li></ul>
     </div>
     <div class="how-to"><div class="how-to-title">How to Apply</div><p>Dispense on fingertips, press and blend from center outward. All phases — only makeup safe for Phase 1. In Phase 2–3, use as first layer under cushion.</p></div>
+    <div class="suitability">
+      <div class="suit-row"><span class="suit-label">Suitability</span><span class="suit-rating suit-excellent">🟢 Excellent — Most Skin-Friendly Makeup Option</span></div>
+      <div class="suit-row"><span class="suit-label">Addresses</span><span class="suit-tag">Skin tone unevenness</span><span class="suit-tag">Dullness</span><span class="suit-tag">Dehydration during wear</span><span class="suit-tag">Pore appearance</span></div>
+      <div class="suit-note">Of all your makeup products, this is the safest and most compatible with sensitized skin. The serum base means it behaves more like a skincare product than a traditional foundation — lower risk of clogging pores, less likelihood of triggering reactions. Its lightweight coverage also means less product sitting on an already-reactive skin surface. The one makeup item you can reach for even on a Phase 1 day if you need some coverage.</div>
+    </div>
   </div>
 
   <div class="product-card">
@@ -668,6 +754,11 @@
       <ul class="benefits-list"><li>Dual function — targeted coverage with BB cream base in one</li><li>Brightening formula lifts dark circles and spots</li><li>Isolating base helps makeup adhere and last longer</li><li>Lighter weight than traditional concealer</li><li>Versatile enough to replace foundation on minimal makeup days</li></ul>
     </div>
     <div class="how-to"><div class="how-to-title">How to Apply</div><p><strong>As base:</strong> all over face with fingertips. <strong>As concealer:</strong> ring fingertip or small brush under eyes, blemishes, redness. Pat to blend — never rub. Set with translucent powder. Phase 2–3.</p></div>
+    <div class="suitability">
+      <div class="suit-row"><span class="suit-label">Suitability</span><span class="suit-rating suit-good">🔵 Good — Lighter Than Traditional Concealers</span></div>
+      <div class="suit-row"><span class="suit-label">Addresses</span><span class="suit-tag">Dark circles</span><span class="suit-tag">PIH spots</span><span class="suit-tag">Localised redness</span><span class="suit-tag">Uneven tone</span></div>
+      <div class="suit-warn">⚠️ The "isolating" component contains film-forming ingredients to help makeup last — these can feel slightly occlusive on sensitized skin. Apply only where needed (spots, under-eyes) rather than all over during Phase 2. Ensure complete removal every evening as residue from film-formers left overnight can stress a recovering barrier.</div>
+    </div>
   </div>
 
   <div class="product-card">
@@ -677,6 +768,11 @@
       <ul class="benefits-list"><li>Sets foundation and concealer for longer-lasting wear</li><li>Controls T-zone shine without drying sensitive areas</li><li>Blurs pores and smooths texture for a soft-focus finish</li><li>Baking technique under eyes reduces concealer creasing</li><li>Translucent formula doesn't interfere with color correction</li></ul>
     </div>
     <div class="how-to"><div class="how-to-title">How to Apply</div><p>Fluffy brush, light dusting over T-zone. Under-eye baking: press with damp sponge, wait 2–3 min, brush off. Avoid heavy powdering on dry or sensitized cheek areas. Phase 2–3.</p></div>
+    <div class="suitability">
+      <div class="suit-row"><span class="suit-label">Suitability</span><span class="suit-rating suit-good">🔵 Good — Translucent is the Safest Powder Choice</span></div>
+      <div class="suit-row"><span class="suit-label">Addresses</span><span class="suit-tag">Makeup longevity</span><span class="suit-tag">Shine control</span><span class="suit-tag">Concealer creasing</span></div>
+      <div class="suit-warn">⚠️ Powder of any kind can be drying on sensitized skin — especially on cheeks, temples, and any dry or flaky patches. Apply with the lightest possible hand and only on the T-zone. Heavy powdering over sensitized areas can emphasise dry patches, clog pores, and feel uncomfortable. If skin is particularly dry or flare-prone that day, skip powder entirely and rely on the setting mist to set your base.</div>
+    </div>
   </div>
 
   <h3 class="subheading">✦ Setting &amp; Finishing Mists</h3>
@@ -696,6 +792,11 @@
       </ul>
     </div>
     <div class="how-to"><div class="how-to-title">How to Apply</div><p>Final step of the makeup routine. Close eyes, hold 20–25cm from face. Spray in a sweeping "X" then "T" pattern for full even coverage. Allow to air-dry for 10–15 seconds — do not pat or blend in. For mid-day use: blot excess oil first, then mist over makeup to refresh and re-mattify.</p></div>
+    <div class="suitability">
+      <div class="suit-row"><span class="suit-label">Suitability</span><span class="suit-rating suit-good">🔵 Good — Phase 2 &amp; 3, Check Alcohol Content</span></div>
+      <div class="suit-row"><span class="suit-label">Addresses</span><span class="suit-tag">Excess shine/sebum</span><span class="suit-tag">Makeup longevity</span><span class="suit-tag">UV exposure (with UV actives)</span><span class="suit-tag">Mid-day refresh</span></div>
+      <div class="suit-warn">⚠️ Matte-finish mists commonly contain alcohol (denatured alcohol or isopropyl) to achieve rapid drying and oil control — alcohol is a known barrier disruptor and can irritate sensitized skin. Spray from the recommended distance (not closer) to reduce concentration on skin. If skin feels stinging or unusually dry after application, hold further away or limit use to T-zone only. Confirm the formula's alcohol level before regular use in Phase 2.</div>
+    </div>
   </div>
 
   <div class="product-card">
@@ -713,6 +814,11 @@
       </ul>
     </div>
     <div class="how-to"><div class="how-to-title">How to Apply</div><p>After all makeup is applied and powder is set. Hold 25–30cm from face, close eyes. Spray in an "X" then "T" motion across the face. Let it dry naturally for 10–15 seconds without touching. <strong>Layering tip:</strong> Spray LOREAL first to lock everything in, then follow with PIXY mist on top for a fresh matte finish — the combination maximises both longevity and shine-control.</p></div>
+    <div class="suitability">
+      <div class="suit-row"><span class="suit-label">Suitability</span><span class="suit-rating suit-caution">🟠 Caution — Film-Formers Require Full Nightly Removal</span></div>
+      <div class="suit-row"><span class="suit-label">Addresses</span><span class="suit-tag">Makeup bonding &amp; longevity</span><span class="suit-tag">Transfer prevention</span><span class="suit-tag">Fading &amp; creasing</span></div>
+      <div class="suit-warn">⚠️ Film-forming polymers create an invisible layer that locks makeup — but this same film can trap sebum, bacteria, and pollutants against sensitized skin if not removed properly. This makes thorough double cleansing every evening non-negotiable. If you notice increased congestion, clogged pores, or a tight sensation after use, your cleansing routine may need to be more thorough. Also check the formula for alcohol — if present, spray from the maximum recommended distance to reduce irritation risk on sensitized skin.</div>
+    </div>
   </div>
 </div>
 </section>
