@@ -827,165 +827,242 @@
 <section class="section" id="makeup-routine">
 <div class="section-inner">
   <h2 class="section-title">💋 Makeup Routine</h2>
-  <p class="section-sub">A step-by-step makeup tutorial built around your exact products — from skin prep to final mist.</p>
+  <p class="section-sub">A suitability-adjusted step-by-step tutorial — every decision informed by your sensitized skin condition.</p>
   <div class="section-divider"></div>
 
-  <div class="alert-box">
-    <h4>💡 Before You Start</h4>
-    <p>Always complete your full skincare routine and allow SPF to set for <strong>5–10 minutes</strong> before applying any makeup. This ensures your barrier is protected and your base goes on smoothly. All makeup steps are <strong>Phase 2–3 only</strong> — in Phase 1, keep skin bare or use ESQA Skin Tint only. Choose your coverage level based on the occasion and how your skin feels today.</p>
+  <!-- SKIN CHECK GATE -->
+  <div style="background:linear-gradient(135deg,#e8f1fd,#d2e4fa);border:1.5px solid var(--border2);border-left:4px solid var(--royal);border-radius:14px;padding:18px 20px;margin-bottom:20px">
+    <h4 style="color:var(--royal);font-size:.9rem;font-weight:600;margin-bottom:10px">🔍 Start Here — Daily Skin Condition Check</h4>
+    <p style="font-size:.82rem;color:var(--text2);line-height:1.65;margin-bottom:12px">Before picking up a single product, assess your skin honestly. Your routine today depends on how your skin feels <em>right now</em>, not how it felt yesterday.</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:10px">
+      <div style="background:rgba(255,255,255,.5);border-radius:12px;padding:12px;border:1px solid #a8c8f0">
+        <div style="font-weight:700;font-size:.75rem;color:#c0392b;margin-bottom:5px">🔴 FLARE DAY</div>
+        <div style="font-size:.73rem;color:var(--text2);line-height:1.5">Stinging, hot, visibly red, or reactive skin.<br><strong>Rule:</strong> ESQA Skin Tint only — or no makeup at all. Skip cushion, concealer, powder, and all mists. Skin needs air.</div>
+      </div>
+      <div style="background:rgba(255,255,255,.5);border-radius:12px;padding:12px;border:1px solid #a8c8f0">
+        <div style="font-weight:700;font-size:.75rem;color:#e67e22;margin-bottom:5px">🟠 SENSITIVE DAY</div>
+        <div style="font-size:.73rem;color:var(--text2);line-height:1.5">Mild tightness or slight reactivity but manageable.<br><strong>Rule:</strong> ESQA + TIRTIR cushion (TIRTIR is better tolerated than Skintific on reactive days). ONLYOU spot only. Skip powder. LOREAL mist from extra distance only.</div>
+      </div>
+      <div style="background:rgba(255,255,255,.5);border-radius:12px;padding:12px;border:1px solid #a8c8f0">
+        <div style="font-weight:700;font-size:.75rem;color:#2e7d52;margin-bottom:5px">🟢 STABLE DAY</div>
+        <div style="font-size:.73rem;color:var(--text2);line-height:1.5">Skin feels calm, comfortable, and hydrated.<br><strong>Rule:</strong> Full routine available. Choose coverage level freely. All products can be used as directed.</div>
+      </div>
+      <div style="background:rgba(255,255,255,.5);border-radius:12px;padding:12px;border:1px solid #a8c8f0">
+        <div style="font-weight:700;font-size:.75rem;color:#1a4dc2;margin-bottom:5px">✨ THRIVING DAY</div>
+        <div style="font-size:.73rem;color:var(--text2);line-height:1.5">Bouncy, radiant, fully comfortable skin (Phase 3).<br><strong>Rule:</strong> Full glam available — all products, both mists. You've earned it.</div>
+      </div>
+    </div>
   </div>
 
   <!-- COVERAGE SELECTOR -->
   <div style="background:var(--card);border:1.5px solid var(--border);border-radius:20px;padding:22px;margin-bottom:24px;box-shadow:var(--shadow)">
-    <div style="font-family:'Playfair Display',serif;font-size:1.05rem;color:var(--royal);font-weight:600;margin-bottom:14px">✦ Choose Your Coverage Level</div>
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px">
+    <div style="font-family:'Playfair Display',serif;font-size:1.05rem;color:var(--royal);font-weight:600;margin-bottom:6px">✦ Choose Your Coverage Level</div>
+    <p style="font-size:.78rem;color:var(--text3);margin-bottom:14px">Match your look to your skin condition check above. Higher coverage = more products on skin = more thorough removal needed at night.</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px">
       <div style="background:var(--step-bg);border-radius:14px;padding:14px;border:1px solid var(--border)">
-        <div style="font-weight:700;color:var(--sky);font-size:.8rem;margin-bottom:4px">🌿 BARE &amp; NATURAL</div>
-        <div style="font-size:.75rem;color:var(--text2);line-height:1.5">ESQA Skin Tint only + ONLYOU spot conceal. Best for Phase 1–2 or rest days. Skip powder and mists.</div>
+        <div style="font-weight:700;color:var(--sky);font-size:.78rem;margin-bottom:4px">🌿 BARE &amp; NATURAL</div>
+        <div style="font-size:.73rem;color:var(--text2);line-height:1.5;margin-bottom:6px">ESQA Skin Tint + ONLYOU spot only. No powder. No mists.</div>
+        <div style="font-size:.7rem;color:#2e7d52;font-weight:600">✓ Safe: All phases incl. Phase 1<br>✓ Lowest irritation risk<br>✓ Best for flare &amp; sensitive days</div>
       </div>
       <div style="background:var(--step-bg);border-radius:14px;padding:14px;border:1px solid var(--border)">
-        <div style="font-weight:700;color:var(--sky);font-size:.8rem;margin-bottom:4px">🌸 SOFT &amp; EVERYDAY</div>
-        <div style="font-size:.75rem;color:var(--text2);line-height:1.5">ESQA base + Skintific cushion + concealer + light powder + LOREAL mist. Polished but effortless.</div>
+        <div style="font-weight:700;color:var(--sky);font-size:.78rem;margin-bottom:4px">🌸 SOFT &amp; EVERYDAY</div>
+        <div style="font-size:.73rem;color:var(--text2);line-height:1.5;margin-bottom:6px">ESQA + TIRTIR cushion (better-tolerated) + ONLYOU spot + T-zone powder + LOREAL mist (far distance).</div>
+        <div style="font-size:.7rem;color:#1a5276;font-weight:600">✓ Phase 2–3 stable days<br>⚠ Patch test cushion first<br>⚠ Double cleanse at night</div>
       </div>
       <div style="background:var(--step-bg);border-radius:14px;padding:14px;border:1px solid var(--border)">
-        <div style="font-weight:700;color:var(--sky);font-size:.8rem;margin-bottom:4px">💄 FULL GLAM</div>
-        <div style="font-size:.75rem;color:var(--text2);line-height:1.5">ESQA + TIRTIR cushion + conceal + bake + LOREAL lock mist + PIXY matte mist. Maximum wear &amp; finish.</div>
+        <div style="font-weight:700;color:var(--sky);font-size:.78rem;margin-bottom:4px">💄 FULL COVERAGE</div>
+        <div style="font-size:.73rem;color:var(--text2);line-height:1.5;margin-bottom:6px">ESQA + Skintific OR TIRTIR + ONLYOU + bake powder + LOREAL mist + PIXY mist.</div>
+        <div style="font-size:.7rem;color:#1a5276;font-weight:600">✓ Phase 2–3 stable days only<br>⚠ Both cushions must be patch tested<br>⚠ Thorough double cleanse essential</div>
       </div>
       <div style="background:var(--step-bg);border-radius:14px;padding:14px;border:1px solid var(--border)">
-        <div style="font-weight:700;color:var(--sky);font-size:.8rem;margin-bottom:4px">🌤 LONG DAY OUT</div>
-        <div style="font-size:.75rem;color:var(--text2);line-height:1.5">Skintific cushion + concealer + bake + LOREAL mist + PIXY mist. Built for heat, humidity &amp; long hours.</div>
+        <div style="font-weight:700;color:var(--sky);font-size:.78rem;margin-bottom:4px">🌤 LONG DAY / EVENT</div>
+        <div style="font-size:.73rem;color:var(--text2);line-height:1.5;margin-bottom:6px">ESQA + Skintific + TIRTIR layered + conceal + bake + LOREAL + PIXY. Maximum longevity.</div>
+        <div style="font-size:.7rem;color:#935200;font-weight:600">⚠ Phase 3 only (thriving skin)<br>⚠ Both mists = higher alcohol exposure<br>⚠ Non-negotiable double cleanse</div>
       </div>
     </div>
   </div>
 
   <h3 style="font-family:'Playfair Display',serif;color:var(--sky);font-size:1.05rem;margin-bottom:16px;font-weight:600">— Step-by-Step Makeup Tutorial —</h3>
 
+  <!-- STEP 1 -->
   <div class="routine-step">
     <div class="step-num">1</div>
     <div class="step-content">
-      <div class="step-header"><div class="step-title">Skin Prep Check</div><span class="rphase-badge rp-prep">Prep Phase</span></div>
-      <div class="step-product">Skincare complete · SPF set for 5–10 min · Skin feels comfortable</div>
-      <div class="step-desc">Before touching any makeup, do a quick skin check. Gently press your fingertip to your cheek — if SPF transfers or feels wet, wait another 2 minutes. Your base should feel dry to the touch. If any areas feel tight or dry, press a tiny amount of <strong>Somethinc Ceramic Gel</strong> onto those spots and allow 60 seconds to absorb. A well-prepped canvas makes all the difference for sensitive skin wear.</div>
-      <span class="step-tip">🌿 Hydrated skin = longer-lasting, more comfortable makeup</span>
+      <div class="step-header"><div class="step-title">Skin Prep &amp; Condition Check</div><span class="rphase-badge rp-prep">Prep Phase</span></div>
+      <div class="step-product">Skincare complete · SPF set 5–10 min · Condition check done ✓</div>
+      <div class="step-desc">Press your fingertip to your cheek — SPF should feel dry and not transfer. Check in with your skin: any stinging, warmth, or visible redness? <strong>If yes → Flare Day protocol</strong> (ESQA only or bare). If skin feels tight or dry in patches, press a tiny amount of <strong>Somethinc Ceramic Skin Gel</strong> (🔵 Good for oily/combo sensitized skin) onto those spots and wait 60 seconds. This step determines every product decision that follows — don't skip it.</div>
+      <span class="step-tip">🌿 Your skin's condition today = your makeup routine today</span>
     </div>
   </div>
   <div class="step-connector"></div>
 
+  <!-- STEP 2 -->
   <div class="routine-step">
     <div class="step-num">2</div>
     <div class="step-content">
-      <div class="step-header"><div class="step-title">First Base Layer — Skin Tint</div><span class="rphase-badge rp-base">Base Phase</span></div>
+      <div class="step-header"><div class="step-title">First Base — Serum Skin Tint</div><span class="rphase-badge rp-base">Base Phase</span><span class="suit-rating suit-excellent" style="font-size:.68rem;padding:2px 8px">🟢 All Phases Safe</span></div>
       <div class="step-product">ESQA Minimalist Blurring Serum Skin Tint — Vanilla</div>
-      <div class="step-desc">Dispense a small amount (2–3 drops) onto your fingertips. Starting from the center of your face, press and blend outward using gentle pressing motions — never rubbing. Work it into the skin around the nose, under-eyes, and hairline. This creates an even, skin-like base layer that makes the cushion go on more smoothly and last longer. <strong>Bare &amp; Natural look:</strong> stop here and move to Step 4 (concealer).</div>
-      <span class="step-tip">✦ Press into skin — don't swipe or drag</span>
+      <div class="step-desc">
+        Dispense 2–3 drops onto fingertips. Press and blend gently from the center of your face outward — never rubbing or swiping, which drags on sensitized skin. Work carefully around the nose sides, under-eyes, and hairline.<br><br>
+        This is the <strong>most skin-compatible base in your collection</strong> — it behaves like skincare, treats skin during wear, and is the only base safe enough for Phase 1. On flare or sensitive days, this is where your base routine ends.<br><br>
+        <strong>🌿 Bare &amp; Natural:</strong> Stop here. Proceed directly to Step 4.
+      </div>
+      <span class="step-tip">✦ The safest base — always start here regardless of coverage goal</span>
     </div>
   </div>
   <div class="step-connector"></div>
 
+  <!-- STEP 3 -->
   <div class="routine-step">
     <div class="step-num">3</div>
     <div class="step-content">
-      <div class="step-header"><div class="step-title">Second Base Layer — Cushion Foundation</div><span class="rphase-badge rp-base">Base Phase</span></div>
-      <div class="step-product">Skintific Cover Glow Cushion (glow finish) · OR · TIRTIR Mask Fit Cushion 17C (matte-satin)</div>
+      <div class="step-header"><div class="step-title">Second Base — Cushion Foundation</div><span class="rphase-badge rp-base">Base Phase</span><span class="suit-rating suit-good" style="font-size:.68rem;padding:2px 8px">🔵 Phase 2–3 Only</span></div>
+      <div class="step-product">TIRTIR Mask Fit 17C (sensitive &amp; stable days) · Skintific Cover Glow (stable &amp; thriving days)</div>
       <div class="step-desc">
-        Load the cushion puff by pressing — not dragging — into the product. Apply in the press-and-roll technique from center face outward:<br>
-        • <strong>Forehead:</strong> press from center out to hairline<br>
-        • <strong>Cheeks:</strong> press from nose outward toward ears<br>
-        • <strong>Nose:</strong> dab gently down the bridge and sides<br>
-        • <strong>Chin &amp; jaw:</strong> press down and blend toward neck<br>
-        Build a second layer only where you need more coverage. <strong>Soft &amp; Everyday:</strong> one layer of Skintific. <strong>Full Glam / Long Day:</strong> TIRTIR on top of Skintific layer.
+        <strong>⚠️ Cushion suitability note:</strong> Both cushions contain fragrance, preservatives, and silicones — common sensitizers. Always patch test for 24 hours before first full-face use. Never apply a new cushion to already-reactive skin.<br><br>
+        <strong>Cushion choice by condition:</strong><br>
+        • <strong>Sensitive (🟠) or early Phase 2:</strong> TIRTIR only — its Niacinamide + HA formula is better tolerated, matte-satin finish is less likely to amplify pores or reactive patches than a full dewy finish<br>
+        • <strong>Stable (🟢) Phase 2–3:</strong> Either cushion. Skintific's glow finish is beautiful but can amplify oiliness — use PIXY mist to control<br>
+        • <strong>Thriving (✨) Phase 3:</strong> Layer Skintific (glow) first, TIRTIR (hold) on top for maximum coverage + wear<br><br>
+        <strong>Technique:</strong> Press and roll the puff from center outward — forehead, cheeks, nose, chin. One press = sheer, two = fuller. Build only where needed.
       </div>
-      <span class="step-tip">💡 One press = sheer coverage · Two presses = fuller coverage</span>
+      <span class="step-tip">💡 On any reactive day, skip this step entirely — ESQA alone is enough</span>
     </div>
   </div>
   <div class="step-connector"></div>
 
+  <!-- STEP 4 -->
   <div class="routine-step">
     <div class="step-num">4</div>
     <div class="step-content">
-      <div class="step-header"><div class="step-title">Concealing &amp; Spot Correction</div><span class="rphase-badge rp-finish">Finish Phase</span></div>
+      <div class="step-header"><div class="step-title">Concealing &amp; Spot Correction</div><span class="rphase-badge rp-finish">Finish Phase</span><span class="suit-rating suit-good" style="font-size:.68rem;padding:2px 8px">🔵 Targeted Use Only</span></div>
       <div class="step-product">ONLYOU Brightening &amp; Isolating BB Cream Concealer</div>
       <div class="step-desc">
-        Using your ring fingertip or a small concealer brush, apply to:<br>
-        • <strong>Under-eyes:</strong> tap in an upside-down triangle shape for a lifted, brightened look<br>
-        • <strong>Blemishes or redness:</strong> dab directly and press gently — don't swipe<br>
-        • <strong>Around the nose:</strong> press along the sides to correct any redness<br>
-        • <strong>Center of forehead:</strong> a small touch brightens and lifts the face<br>
-        Blend edges with your ring finger using light patting taps. The isolating formula helps it meld seamlessly into the cushion beneath.
+        <strong>⚠️ Suitability note:</strong> The isolating (film-forming) component can feel occlusive on sensitized skin. Apply only where needed — do not use as an all-over base in Phase 2, especially on reactive patches.<br><br>
+        Apply with ring fingertip or small brush to:<br>
+        • <strong>Under-eyes:</strong> tap in an upside-down triangle shape — brightens and lifts<br>
+        • <strong>Active blemishes or redness spots:</strong> dab directly, press gently — don't swipe over irritated areas<br>
+        • <strong>Sides of nose:</strong> press to correct persistent redness<br><br>
+        Blend edges with the ring finger using light patting only. <strong>On sensitive days:</strong> use only under-eyes, skip applying to any inflamed or stinging spots — concealing over reactive areas increases irritation risk.
       </div>
-      <span class="step-tip">💡 Ring finger = lightest pressure — perfect for under-eye</span>
+      <span class="step-tip">💡 Ring finger = lightest touch · Spot apply only on sensitized skin</span>
     </div>
   </div>
   <div class="step-connector"></div>
 
+  <!-- STEP 5 -->
   <div class="routine-step">
     <div class="step-num">5</div>
     <div class="step-content">
-      <div class="step-header"><div class="step-title">Setting with Loose Powder</div><span class="rphase-badge rp-finish">Finish Phase</span></div>
+      <div class="step-header"><div class="step-title">Setting with Loose Powder</div><span class="rphase-badge rp-finish">Finish Phase</span><span class="suit-rating suit-good" style="font-size:.68rem;padding:2px 8px">🔵 T-Zone Only</span></div>
       <div class="step-product">Second Date Loose Powder — Translucent</div>
       <div class="step-desc">
-        <strong>T-zone setting:</strong> Load a large fluffy brush, tap off excess, and dust lightly over forehead, nose, and chin with sweeping motions. One pass is enough — you want to set, not cake.<br><br>
-        <strong>Under-eye baking (optional but recommended for Full Glam):</strong> Press a generous amount of powder under eyes with a damp beauty sponge or flat brush. Leave to "bake" for 2–3 minutes while you do brows or lips. Then dust off with a clean fluffy brush — reveals crease-free, brightened under-eyes.<br><br>
-        <strong>Skip powder</strong> on cheeks, temples, and any dry or sensitized areas — keep those dewy and natural.
+        <strong>⚠️ Suitability note:</strong> Powder is inherently drying — a significant concern for sensitized skin. Use the absolute minimum needed. If your skin is in a reactive or dry state today, <strong>skip this step entirely</strong> and rely on the LOREAL mist to set your base instead.<br><br>
+        <strong>T-zone only (stable &amp; thriving days):</strong> Load a large fluffy brush, tap off most of the powder, and dust one light pass across forehead, nose, and chin. That's it.<br><br>
+        <strong>Under-eye baking (Full Coverage &amp; Event looks only):</strong> Press powder under eyes with a damp sponge. Bake for 2–3 minutes. Dust off with a clean brush — reveals crease-free, brightened under-eyes.<br><br>
+        <strong>Never powder:</strong> Dry cheeks, flaky patches, any area showing redness or sensitivity, or anywhere that already feels tight.
       </div>
-      <span class="step-tip">✨ Less powder = more skin-like and comfortable all day</span>
+      <span class="step-tip">✨ If in doubt, skip powder — mist will set your base without drying skin</span>
     </div>
   </div>
   <div class="step-connector"></div>
 
+  <!-- STEP 6 -->
   <div class="routine-step">
     <div class="step-num">6</div>
     <div class="step-content">
-      <div class="step-header"><div class="step-title">Lock with Setting Mist</div><span class="rphase-badge rp-finish">Finish Phase</span></div>
+      <div class="step-header"><div class="step-title">Lock with Setting Mist</div><span class="rphase-badge rp-finish">Finish Phase</span><span class="suit-rating suit-caution" style="font-size:.68rem;padding:2px 8px">🟠 Film-Former Caution</span></div>
       <div class="step-product">L'Oréal Paris Infallible 3-Second Setting Mist</div>
       <div class="step-desc">
-        Close your eyes and hold the can 25–30cm from your face. Spray in an <strong>"X" motion</strong> (top-left to bottom-right, then top-right to bottom-left) followed by a <strong>"T" motion</strong> (across the forehead, then down the nose). Allow to air-dry naturally for 10–15 seconds — do not pat, fan, or blend in. The film-forming polymers bond and lock all your makeup layers together invisibly. This step is especially important for sensitized skin as it prevents the need for mid-day touch-ups that involve rubbing.
+        <strong>⚠️ Suitability note:</strong> Contains film-forming polymers and may contain alcohol — both require consideration for sensitized skin. The film traps all layers (including any accumulated sebum) against your skin for hours, and <strong>will clog pores if not fully removed</strong>. This makes double cleansing at night non-negotiable when using this mist.<br><br>
+        <strong>Application adjustments for sensitized skin:</strong><br>
+        • Hold at maximum distance (30cm) — reduces concentration hitting the skin<br>
+        • Spray in "X + T" motion, eyes closed, one pass only<br>
+        • Air-dry completely (15 sec) — do not pat in<br>
+        • <strong>Sensitive day (🟠):</strong> Hold even further (35cm) and do only the "T" motion across forehead and nose — less overall exposure<br>
+        • <strong>Flare day (🔴):</strong> Skip entirely — the film will trap irritants and worsen reactivity<br><br>
+        Despite the cautions, this mist <em>benefits</em> sensitized skin by reducing the need for mid-day rubbing touch-ups, which cause more barrier disruption than the mist itself does.
       </div>
-      <span class="step-tip">🔒 L'Oréal mist first = locks everything in place</span>
+      <span class="step-tip">🔒 Reduces touch-up rubbing — but non-negotiable double cleanse tonight</span>
     </div>
   </div>
   <div class="step-connector"></div>
 
+  <!-- STEP 7 -->
   <div class="routine-step">
     <div class="step-num">7</div>
     <div class="step-content">
-      <div class="step-header"><div class="step-title">Finish with Matte Mist</div><span class="rphase-badge rp-finish">Finish Phase</span></div>
+      <div class="step-header"><div class="step-title">Finish with Matte Mist</div><span class="rphase-badge rp-finish">Finish Phase</span><span class="suit-rating suit-good" style="font-size:.68rem;padding:2px 8px">🔵 Check Alcohol · Phase 2–3</span></div>
       <div class="step-product">PIXY Aqua-Beauty Protecting Mist Matte-Finish</div>
       <div class="step-desc">
-        Once the L'Oréal mist has dried (10–15 sec), follow immediately with the PIXY matte mist as the final finishing touch. Hold 20–25cm away, close eyes, spray evenly across the face in the same "X + T" pattern. Allow to dry fully without touching. The PIXY mist adds the matte-control layer on top of L'Oréal's lock — together they give you makeup that stays put <em>and</em> stays shine-free.<br><br>
-        <strong>Oily skin tip:</strong> Focus extra spray on T-zone (forehead + nose). <strong>Normal/dry tip:</strong> One light mist all over is enough — skip the T-zone focus to preserve some natural glow on cheeks.
+        <strong>⚠️ Suitability note:</strong> Matte-finish mists commonly contain alcohol for rapid drying and oil control — a known barrier disruptor. Confirm your formula's alcohol level. If alcohol is listed in the top 5 ingredients, treat this as a <strong>sensitive day skip</strong> or apply only on the T-zone from maximum distance.<br><br>
+        Once LOREAL mist is fully dry (15+ sec), follow with PIXY in the same "X + T" pattern from 20–25cm. Air-dry completely without touching.<br><br>
+        <strong>By skin condition:</strong><br>
+        • <strong>🔴 Flare day:</strong> Skip entirely<br>
+        • <strong>🟠 Sensitive day:</strong> T-zone only, hold at 30cm, one very light pass<br>
+        • <strong>🟢 Stable day:</strong> Full face application as directed<br>
+        • <strong>✨ Thriving day:</strong> Focus extra on T-zone for maximum matte control + UV boost
       </div>
-      <span class="step-tip">🌸 PIXY mist last = refreshed matte finish on top</span>
+      <span class="step-tip">🌸 T-zone focus on oily skin · Full face on stable days only</span>
     </div>
   </div>
 
-  <!-- MIST COMBO GUIDE -->
-  <div style="background:var(--card);border:1.5px solid var(--border);border-radius:20px;padding:22px;margin-top:8px;box-shadow:var(--shadow)">
-    <div style="font-family:'Playfair Display',serif;font-size:1rem;color:var(--royal);font-weight:600;margin-bottom:14px">🌫️ Setting Mist Combinations Guide</div>
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px">
+  <!-- MIST COMBO GUIDE — SENSITIZED SKIN ADJUSTED -->
+  <div style="background:var(--card);border:1.5px solid var(--border);border-radius:20px;padding:22px;margin-top:16px;box-shadow:var(--shadow)">
+    <div style="font-family:'Playfair Display',serif;font-size:1rem;color:var(--royal);font-weight:600;margin-bottom:6px">🌫️ Setting Mist Guide — Adjusted for Sensitized Skin</div>
+    <p style="font-size:.76rem;color:var(--text3);margin-bottom:14px">Choose your mist strategy based on today's skin condition, not just the occasion.</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(195px,1fr));gap:12px">
       <div style="background:var(--step-bg);border-radius:12px;padding:14px;border:1px solid var(--border)">
-        <div style="font-weight:700;font-size:.78rem;color:var(--royal);margin-bottom:5px">Everyday Wear</div>
-        <div style="font-size:.75rem;color:var(--text2);line-height:1.55">LOREAL mist only. Fast, lightweight lock. Adds just enough hold for a regular day without over-mattifying.</div>
+        <div style="font-weight:700;font-size:.76rem;color:#c0392b;margin-bottom:5px">🔴 Flare Day</div>
+        <div style="font-size:.73rem;color:var(--text2);line-height:1.55">Skip both mists completely. The film from LOREAL and the alcohol in PIXY will aggravate reactive skin. Bare skin or ESQA skin tint only.</div>
       </div>
       <div style="background:var(--step-bg);border-radius:12px;padding:14px;border:1px solid var(--border)">
-        <div style="font-weight:700;font-size:.78rem;color:var(--royal);margin-bottom:5px">Oily / Humid Days</div>
-        <div style="font-size:.75rem;color:var(--text2);line-height:1.55">LOREAL first → PIXY second. Maximum shine control + long-wear bond. Ideal for outdoor activities or long work days.</div>
+        <div style="font-weight:700;font-size:.76rem;color:#e67e22;margin-bottom:5px">🟠 Sensitive Day</div>
+        <div style="font-size:.73rem;color:var(--text2);line-height:1.55">LOREAL only — from 35cm, "T" motion only. Skip PIXY unless alcohol content is confirmed low. This gives you some hold without over-exposing skin.</div>
       </div>
       <div style="background:var(--step-bg);border-radius:12px;padding:14px;border:1px solid var(--border)">
-        <div style="font-weight:700;font-size:.78rem;color:var(--royal);margin-bottom:5px">Events &amp; Special Occasions</div>
-        <div style="font-size:.75rem;color:var(--text2);line-height:1.55">LOREAL first → wait 20 sec → PIXY second. Double-mist for maximum longevity. Your makeup stays photo-ready for hours.</div>
+        <div style="font-weight:700;font-size:.76rem;color:#2e7d52;margin-bottom:5px">🟢 Stable Day</div>
+        <div style="font-size:.73rem;color:var(--text2);line-height:1.55">LOREAL first (30cm, "X+T") → PIXY second (25cm, "X+T"). Full face. Standard application. Double cleanse tonight.</div>
       </div>
       <div style="background:var(--step-bg);border-radius:12px;padding:14px;border:1px solid var(--border)">
-        <div style="font-weight:700;font-size:.78rem;color:var(--royal);margin-bottom:5px">Mid-Day Refresh</div>
-        <div style="font-size:.75rem;color:var(--text2);line-height:1.55">Blot → Bening's SPF spray → PIXY mist to re-mattify and refresh. Skip LOREAL for touch-ups — it's a setting, not a refreshing spray.</div>
+        <div style="font-weight:700;font-size:.76rem;color:#1a4dc2;margin-bottom:5px">✨ Thriving / Event</div>
+        <div style="font-size:.73rem;color:var(--text2);line-height:1.55">LOREAL → wait 20 sec → PIXY. Full double-mist for maximum longevity. Photo-ready finish for hours. Micellar water + double cleanse are mandatory tonight.</div>
+      </div>
+      <div style="background:var(--step-bg);border-radius:12px;padding:14px;border:1px solid var(--border)">
+        <div style="font-weight:700;font-size:.76rem;color:var(--royal);margin-bottom:5px">🌤 Mid-Day Refresh</div>
+        <div style="font-size:.73rem;color:var(--text2);line-height:1.55">Blot first → Bening's SPF spray → PIXY mist to re-mattify. Never use LOREAL for mid-day — it's a bonding agent, not a refresh spray.</div>
+      </div>
+      <div style="background:var(--step-bg);border-radius:12px;padding:14px;border:1px solid var(--border)">
+        <div style="font-weight:700;font-size:.76rem;color:var(--royal);margin-bottom:5px">🌧 Humid / Outdoor Day</div>
+        <div style="font-size:.73rem;color:var(--text2);line-height:1.55">TIRTIR cushion (better wear in humidity than Skintific) → LOREAL → PIXY T-zone focus. The extra sweat means you must reapply Bening's SPF every 2 hours.</div>
       </div>
     </div>
   </div>
 
-  <!-- REMOVAL REMINDER -->
+  <!-- REMOVAL REMINDER — EXPANDED -->
   <div class="alert-box" style="margin-top:20px">
-    <h4>🌙 Always Remove Fully at Night</h4>
-    <p>Setting mists create a film-forming layer that requires thorough removal. Always double cleanse in the evening: micellar water first to dissolve the film, followed by your gel cleanser. Leaving setting mist residue on sensitized skin overnight can clog pores and aggravate barrier disruption. Clean skin = better barrier repair while you sleep.</p>
+    <h4>🌙 Evening Removal — Non-Negotiable for Every Makeup Day</h4>
+    <p style="margin-bottom:8px">The more products you layered, the more thorough your removal needs to be. Film-forming mists, isolating concealers, and cushion silicones all require deliberate cleansing — they do not dissolve with a single gel cleanser pass alone.</p>
+    <ul>
+      <li><strong>Bare &amp; Natural day:</strong> Single cleanse with Pond's Biome or Somethinc Low pH is sufficient.</li>
+      <li><strong>Cushion + powder day:</strong> Micellar water first → follow with gel cleanser as second cleanse.</li>
+      <li><strong>LOREAL mist day:</strong> Micellar water (first pass to break down film) → second full cleanse with gel → check no residue remains.</li>
+      <li><strong>Both mists day:</strong> Oil-based or balm cleanser if available → micellar water → gel cleanser. Three-step removal for maximum mist days. Any residue left overnight will trap bacteria and pollutants against your sensitized barrier.</li>
+    </ul>
+  </div>
+
+  <!-- FLARE RECOVERY PROTOCOL -->
+  <div style="background:linear-gradient(135deg,#fdebd0,#fde8cc);border:1.5px solid #f0c090;border-left:4px solid #c0602a;border-radius:14px;padding:18px 20px;margin-top:16px">
+    <h4 style="color:#c0602a;font-size:.9rem;font-weight:600;margin-bottom:8px">🚨 Mid-Makeup Reaction Protocol</h4>
+    <p style="font-size:.82rem;color:var(--text2);line-height:1.65;margin-bottom:8px">If skin starts stinging, burning, or turning red <em>while</em> applying makeup:</p>
+    <ul style="padding-left:16px">
+      <li style="font-size:.8rem;color:var(--text2);margin-bottom:4px;line-height:1.5"><strong>Stop immediately</strong> — do not continue applying more product hoping it improves.</li>
+      <li style="font-size:.8rem;color:var(--text2);margin-bottom:4px;line-height:1.5"><strong>Remove gently</strong> — use micellar water on a soft cotton pad, pressing and lifting (not wiping).</li>
+      <li style="font-size:.8rem;color:var(--text2);margin-bottom:4px;line-height:1.5"><strong>Apply Centella Ampoule</strong> generously across the entire face — this is your emergency calming treatment.</li>
+      <li style="font-size:.8rem;color:var(--text2);margin-bottom:4px;line-height:1.5"><strong>Identify the trigger</strong> — note which product you last applied before the reaction started.</li>
+      <li style="font-size:.8rem;color:var(--text2);margin-bottom:4px;line-height:1.5"><strong>Let skin breathe</strong> — apply Glad2Glow Ceramide Moisturizer and nothing else. Rest the barrier.</li>
+      <li style="font-size:.8rem;color:var(--text2);margin-bottom:4px;line-height:1.5"><strong>Avoid that product</strong> for at least 2 weeks before cautiously re-patch-testing.</li>
+    </ul>
   </div>
 </div>
 </section>
