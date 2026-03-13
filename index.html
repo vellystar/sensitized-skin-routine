@@ -87,9 +87,9 @@
   .pill{flex-shrink:0;padding:7px 16px;border-radius:20px;font-size:.78rem;font-weight:500;cursor:pointer;background:var(--pill-inactive);color:var(--pill-text-inactive);border:1.5px solid transparent;transition:all .3s cubic-bezier(.34,1.2,.64,1);white-space:nowrap}
   .pill.active,.pill:hover{background:var(--pill-active);color:#fff;transform:translateY(-1px);box-shadow:0 4px 14px var(--glow)}
 
-  main{padding-top:110px}
+  main{padding-top:0}
 
-  .hero{background:var(--hero-grad);padding:60px 32px 70px;text-align:center;position:relative;overflow:hidden}
+  .hero{background:var(--hero-grad);padding:60px 32px 70px;text-align:center;position:relative;overflow:hidden;margin-top:115px}
   .hero::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 30% 50%,rgba(255,255,255,.08) 0%,transparent 60%),radial-gradient(ellipse at 70% 20%,rgba(255,255,255,.06) 0%,transparent 50%)}
   .hero-bubbles{position:absolute;inset:0;pointer-events:none}
   .bubble{position:absolute;border-radius:50%;background:rgba(255,255,255,.07);animation:float 6s ease-in-out infinite}
@@ -224,7 +224,7 @@
 
   @media(max-width:600px){
     .topnav{padding:0 14px}
-    .hero{padding:44px 18px 54px}
+    .hero{padding:44px 18px 54px;margin-top:115px}
     .section{padding:32px 14px}
     .routine-step{flex-direction:column}
     .step-connector{margin-left:0}
@@ -257,6 +257,7 @@
   <div class="pill"         onclick="showSection('phases')">🔄 Phases</div>
   <div class="pill"         onclick="showSection('skincare')">💧 Skincare</div>
   <div class="pill"         onclick="showSection('makeup')">💄 Makeup</div>
+  <div class="pill"         onclick="showSection('makeup-routine')">💋 Makeup Routine</div>
   <div class="pill"         onclick="showSection('morning')">☀️ Morning Routine</div>
   <div class="pill"         onclick="showSection('evening')">🌙 Evening Routine</div>
   <div class="pill"         onclick="showSection('midday')">🌤 Mid-Day Touch Up</div>
@@ -677,6 +678,209 @@
     </div>
     <div class="how-to"><div class="how-to-title">How to Apply</div><p>Fluffy brush, light dusting over T-zone. Under-eye baking: press with damp sponge, wait 2–3 min, brush off. Avoid heavy powdering on dry or sensitized cheek areas. Phase 2–3.</p></div>
   </div>
+
+  <h3 class="subheading">✦ Setting &amp; Finishing Mists</h3>
+
+  <div class="product-card">
+    <div class="product-header"><div class="product-emoji">💦</div><div><div class="product-name">Aqua-Beauty Protecting Mist Matte-Finish</div><div class="product-brand">PIXY</div></div></div>
+    <span class="product-type-tag">Setting Mist · Matte Finish · Finish Phase · Phase 2–3</span>
+    <div class="product-body"><strong>Key Ingredients:</strong> Aqua base, Matte-control agents, UV-protective actives, skin-conditioning complex<br><br>
+    A dual-action mist that sets makeup in place while delivering a long-lasting matte finish. The aqua-based formula refreshes skin upon contact and the UV-protective actives add an extra layer of daily protection on top of your SPF. Ideal for oily or combination-sensitized skin types that need shine control throughout the day.
+      <ul class="benefits-list">
+        <li>Matte-finish formula controls excess shine and sebum throughout the day</li>
+        <li>Aqua base refreshes and cools skin instantly upon application</li>
+        <li>Sets and locks all makeup layers in place for extended wear</li>
+        <li>UV-protective actives contribute to daily sun defence on top of SPF</li>
+        <li>Fine mist delivery ensures even, lightweight coverage without disturbing makeup</li>
+        <li>Keeps the T-zone consistently fresh from morning through afternoon</li>
+      </ul>
+    </div>
+    <div class="how-to"><div class="how-to-title">How to Apply</div><p>Final step of the makeup routine. Close eyes, hold 20–25cm from face. Spray in a sweeping "X" then "T" pattern for full even coverage. Allow to air-dry for 10–15 seconds — do not pat or blend in. For mid-day use: blot excess oil first, then mist over makeup to refresh and re-mattify.</p></div>
+  </div>
+
+  <div class="product-card">
+    <div class="product-header"><div class="product-emoji">✨</div><div><div class="product-name">Infallible 3-Second Setting Mist</div><div class="product-brand">L'Oréal Paris</div></div></div>
+    <span class="product-type-tag">Setting Mist · Long-Wear · Finish Phase · Phase 2–3</span>
+    <div class="product-body"><strong>Key Ingredients:</strong> Film-forming polymers, glycerin, hydrating actives<br><br>
+    L'Oréal's legendary setting mist that locks makeup in place in just 3 seconds, promising up to 24-hour wear. The film-forming technology creates an invisible veil that bonds all makeup layers together into one unified, long-lasting finish. A powerhouse finisher for days when wear-time matters most.
+      <ul class="benefits-list">
+        <li>Film-forming technology bonds all makeup layers together in 3 seconds</li>
+        <li>Up to 24-hour wear — keeps foundation, concealer and powder in place all day</li>
+        <li>Glycerin prevents the dry, cakey feeling that traditional setting sprays can cause</li>
+        <li>Invisible, weightless finish — doesn't alter the look of your base underneath</li>
+        <li>Prevents creasing, fading, and transfer throughout a long day</li>
+        <li>Works on any finish — matte, satin, or dewy bases</li>
+      </ul>
+    </div>
+    <div class="how-to"><div class="how-to-title">How to Apply</div><p>After all makeup is applied and powder is set. Hold 25–30cm from face, close eyes. Spray in an "X" then "T" motion across the face. Let it dry naturally for 10–15 seconds without touching. <strong>Layering tip:</strong> Spray LOREAL first to lock everything in, then follow with PIXY mist on top for a fresh matte finish — the combination maximises both longevity and shine-control.</p></div>
+  </div>
+</div>
+</section>
+
+<!-- ══ SECTION: MAKEUP ROUTINE ══ -->
+<section class="section" id="makeup-routine">
+<div class="section-inner">
+  <h2 class="section-title">💋 Makeup Routine</h2>
+  <p class="section-sub">A step-by-step makeup tutorial built around your exact products — from skin prep to final mist.</p>
+  <div class="section-divider"></div>
+
+  <div class="alert-box">
+    <h4>💡 Before You Start</h4>
+    <p>Always complete your full skincare routine and allow SPF to set for <strong>5–10 minutes</strong> before applying any makeup. This ensures your barrier is protected and your base goes on smoothly. All makeup steps are <strong>Phase 2–3 only</strong> — in Phase 1, keep skin bare or use ESQA Skin Tint only. Choose your coverage level based on the occasion and how your skin feels today.</p>
+  </div>
+
+  <!-- COVERAGE SELECTOR -->
+  <div style="background:var(--card);border:1.5px solid var(--border);border-radius:20px;padding:22px;margin-bottom:24px;box-shadow:var(--shadow)">
+    <div style="font-family:'Playfair Display',serif;font-size:1.05rem;color:var(--royal);font-weight:600;margin-bottom:14px">✦ Choose Your Coverage Level</div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px">
+      <div style="background:var(--step-bg);border-radius:14px;padding:14px;border:1px solid var(--border)">
+        <div style="font-weight:700;color:var(--sky);font-size:.8rem;margin-bottom:4px">🌿 BARE &amp; NATURAL</div>
+        <div style="font-size:.75rem;color:var(--text2);line-height:1.5">ESQA Skin Tint only + ONLYOU spot conceal. Best for Phase 1–2 or rest days. Skip powder and mists.</div>
+      </div>
+      <div style="background:var(--step-bg);border-radius:14px;padding:14px;border:1px solid var(--border)">
+        <div style="font-weight:700;color:var(--sky);font-size:.8rem;margin-bottom:4px">🌸 SOFT &amp; EVERYDAY</div>
+        <div style="font-size:.75rem;color:var(--text2);line-height:1.5">ESQA base + Skintific cushion + concealer + light powder + LOREAL mist. Polished but effortless.</div>
+      </div>
+      <div style="background:var(--step-bg);border-radius:14px;padding:14px;border:1px solid var(--border)">
+        <div style="font-weight:700;color:var(--sky);font-size:.8rem;margin-bottom:4px">💄 FULL GLAM</div>
+        <div style="font-size:.75rem;color:var(--text2);line-height:1.5">ESQA + TIRTIR cushion + conceal + bake + LOREAL lock mist + PIXY matte mist. Maximum wear &amp; finish.</div>
+      </div>
+      <div style="background:var(--step-bg);border-radius:14px;padding:14px;border:1px solid var(--border)">
+        <div style="font-weight:700;color:var(--sky);font-size:.8rem;margin-bottom:4px">🌤 LONG DAY OUT</div>
+        <div style="font-size:.75rem;color:var(--text2);line-height:1.5">Skintific cushion + concealer + bake + LOREAL mist + PIXY mist. Built for heat, humidity &amp; long hours.</div>
+      </div>
+    </div>
+  </div>
+
+  <h3 style="font-family:'Playfair Display',serif;color:var(--sky);font-size:1.05rem;margin-bottom:16px;font-weight:600">— Step-by-Step Makeup Tutorial —</h3>
+
+  <div class="routine-step">
+    <div class="step-num">1</div>
+    <div class="step-content">
+      <div class="step-header"><div class="step-title">Skin Prep Check</div><span class="rphase-badge rp-prep">Prep Phase</span></div>
+      <div class="step-product">Skincare complete · SPF set for 5–10 min · Skin feels comfortable</div>
+      <div class="step-desc">Before touching any makeup, do a quick skin check. Gently press your fingertip to your cheek — if SPF transfers or feels wet, wait another 2 minutes. Your base should feel dry to the touch. If any areas feel tight or dry, press a tiny amount of <strong>Somethinc Ceramic Gel</strong> onto those spots and allow 60 seconds to absorb. A well-prepped canvas makes all the difference for sensitive skin wear.</div>
+      <span class="step-tip">🌿 Hydrated skin = longer-lasting, more comfortable makeup</span>
+    </div>
+  </div>
+  <div class="step-connector"></div>
+
+  <div class="routine-step">
+    <div class="step-num">2</div>
+    <div class="step-content">
+      <div class="step-header"><div class="step-title">First Base Layer — Skin Tint</div><span class="rphase-badge rp-base">Base Phase</span></div>
+      <div class="step-product">ESQA Minimalist Blurring Serum Skin Tint — Vanilla</div>
+      <div class="step-desc">Dispense a small amount (2–3 drops) onto your fingertips. Starting from the center of your face, press and blend outward using gentle pressing motions — never rubbing. Work it into the skin around the nose, under-eyes, and hairline. This creates an even, skin-like base layer that makes the cushion go on more smoothly and last longer. <strong>Bare &amp; Natural look:</strong> stop here and move to Step 4 (concealer).</div>
+      <span class="step-tip">✦ Press into skin — don't swipe or drag</span>
+    </div>
+  </div>
+  <div class="step-connector"></div>
+
+  <div class="routine-step">
+    <div class="step-num">3</div>
+    <div class="step-content">
+      <div class="step-header"><div class="step-title">Second Base Layer — Cushion Foundation</div><span class="rphase-badge rp-base">Base Phase</span></div>
+      <div class="step-product">Skintific Cover Glow Cushion (glow finish) · OR · TIRTIR Mask Fit Cushion 17C (matte-satin)</div>
+      <div class="step-desc">
+        Load the cushion puff by pressing — not dragging — into the product. Apply in the press-and-roll technique from center face outward:<br>
+        • <strong>Forehead:</strong> press from center out to hairline<br>
+        • <strong>Cheeks:</strong> press from nose outward toward ears<br>
+        • <strong>Nose:</strong> dab gently down the bridge and sides<br>
+        • <strong>Chin &amp; jaw:</strong> press down and blend toward neck<br>
+        Build a second layer only where you need more coverage. <strong>Soft &amp; Everyday:</strong> one layer of Skintific. <strong>Full Glam / Long Day:</strong> TIRTIR on top of Skintific layer.
+      </div>
+      <span class="step-tip">💡 One press = sheer coverage · Two presses = fuller coverage</span>
+    </div>
+  </div>
+  <div class="step-connector"></div>
+
+  <div class="routine-step">
+    <div class="step-num">4</div>
+    <div class="step-content">
+      <div class="step-header"><div class="step-title">Concealing &amp; Spot Correction</div><span class="rphase-badge rp-finish">Finish Phase</span></div>
+      <div class="step-product">ONLYOU Brightening &amp; Isolating BB Cream Concealer</div>
+      <div class="step-desc">
+        Using your ring fingertip or a small concealer brush, apply to:<br>
+        • <strong>Under-eyes:</strong> tap in an upside-down triangle shape for a lifted, brightened look<br>
+        • <strong>Blemishes or redness:</strong> dab directly and press gently — don't swipe<br>
+        • <strong>Around the nose:</strong> press along the sides to correct any redness<br>
+        • <strong>Center of forehead:</strong> a small touch brightens and lifts the face<br>
+        Blend edges with your ring finger using light patting taps. The isolating formula helps it meld seamlessly into the cushion beneath.
+      </div>
+      <span class="step-tip">💡 Ring finger = lightest pressure — perfect for under-eye</span>
+    </div>
+  </div>
+  <div class="step-connector"></div>
+
+  <div class="routine-step">
+    <div class="step-num">5</div>
+    <div class="step-content">
+      <div class="step-header"><div class="step-title">Setting with Loose Powder</div><span class="rphase-badge rp-finish">Finish Phase</span></div>
+      <div class="step-product">Second Date Loose Powder — Translucent</div>
+      <div class="step-desc">
+        <strong>T-zone setting:</strong> Load a large fluffy brush, tap off excess, and dust lightly over forehead, nose, and chin with sweeping motions. One pass is enough — you want to set, not cake.<br><br>
+        <strong>Under-eye baking (optional but recommended for Full Glam):</strong> Press a generous amount of powder under eyes with a damp beauty sponge or flat brush. Leave to "bake" for 2–3 minutes while you do brows or lips. Then dust off with a clean fluffy brush — reveals crease-free, brightened under-eyes.<br><br>
+        <strong>Skip powder</strong> on cheeks, temples, and any dry or sensitized areas — keep those dewy and natural.
+      </div>
+      <span class="step-tip">✨ Less powder = more skin-like and comfortable all day</span>
+    </div>
+  </div>
+  <div class="step-connector"></div>
+
+  <div class="routine-step">
+    <div class="step-num">6</div>
+    <div class="step-content">
+      <div class="step-header"><div class="step-title">Lock with Setting Mist</div><span class="rphase-badge rp-finish">Finish Phase</span></div>
+      <div class="step-product">L'Oréal Paris Infallible 3-Second Setting Mist</div>
+      <div class="step-desc">
+        Close your eyes and hold the can 25–30cm from your face. Spray in an <strong>"X" motion</strong> (top-left to bottom-right, then top-right to bottom-left) followed by a <strong>"T" motion</strong> (across the forehead, then down the nose). Allow to air-dry naturally for 10–15 seconds — do not pat, fan, or blend in. The film-forming polymers bond and lock all your makeup layers together invisibly. This step is especially important for sensitized skin as it prevents the need for mid-day touch-ups that involve rubbing.
+      </div>
+      <span class="step-tip">🔒 L'Oréal mist first = locks everything in place</span>
+    </div>
+  </div>
+  <div class="step-connector"></div>
+
+  <div class="routine-step">
+    <div class="step-num">7</div>
+    <div class="step-content">
+      <div class="step-header"><div class="step-title">Finish with Matte Mist</div><span class="rphase-badge rp-finish">Finish Phase</span></div>
+      <div class="step-product">PIXY Aqua-Beauty Protecting Mist Matte-Finish</div>
+      <div class="step-desc">
+        Once the L'Oréal mist has dried (10–15 sec), follow immediately with the PIXY matte mist as the final finishing touch. Hold 20–25cm away, close eyes, spray evenly across the face in the same "X + T" pattern. Allow to dry fully without touching. The PIXY mist adds the matte-control layer on top of L'Oréal's lock — together they give you makeup that stays put <em>and</em> stays shine-free.<br><br>
+        <strong>Oily skin tip:</strong> Focus extra spray on T-zone (forehead + nose). <strong>Normal/dry tip:</strong> One light mist all over is enough — skip the T-zone focus to preserve some natural glow on cheeks.
+      </div>
+      <span class="step-tip">🌸 PIXY mist last = refreshed matte finish on top</span>
+    </div>
+  </div>
+
+  <!-- MIST COMBO GUIDE -->
+  <div style="background:var(--card);border:1.5px solid var(--border);border-radius:20px;padding:22px;margin-top:8px;box-shadow:var(--shadow)">
+    <div style="font-family:'Playfair Display',serif;font-size:1rem;color:var(--royal);font-weight:600;margin-bottom:14px">🌫️ Setting Mist Combinations Guide</div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px">
+      <div style="background:var(--step-bg);border-radius:12px;padding:14px;border:1px solid var(--border)">
+        <div style="font-weight:700;font-size:.78rem;color:var(--royal);margin-bottom:5px">Everyday Wear</div>
+        <div style="font-size:.75rem;color:var(--text2);line-height:1.55">LOREAL mist only. Fast, lightweight lock. Adds just enough hold for a regular day without over-mattifying.</div>
+      </div>
+      <div style="background:var(--step-bg);border-radius:12px;padding:14px;border:1px solid var(--border)">
+        <div style="font-weight:700;font-size:.78rem;color:var(--royal);margin-bottom:5px">Oily / Humid Days</div>
+        <div style="font-size:.75rem;color:var(--text2);line-height:1.55">LOREAL first → PIXY second. Maximum shine control + long-wear bond. Ideal for outdoor activities or long work days.</div>
+      </div>
+      <div style="background:var(--step-bg);border-radius:12px;padding:14px;border:1px solid var(--border)">
+        <div style="font-weight:700;font-size:.78rem;color:var(--royal);margin-bottom:5px">Events &amp; Special Occasions</div>
+        <div style="font-size:.75rem;color:var(--text2);line-height:1.55">LOREAL first → wait 20 sec → PIXY second. Double-mist for maximum longevity. Your makeup stays photo-ready for hours.</div>
+      </div>
+      <div style="background:var(--step-bg);border-radius:12px;padding:14px;border:1px solid var(--border)">
+        <div style="font-weight:700;font-size:.78rem;color:var(--royal);margin-bottom:5px">Mid-Day Refresh</div>
+        <div style="font-size:.75rem;color:var(--text2);line-height:1.55">Blot → Bening's SPF spray → PIXY mist to re-mattify and refresh. Skip LOREAL for touch-ups — it's a setting, not a refreshing spray.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- REMOVAL REMINDER -->
+  <div class="alert-box" style="margin-top:20px">
+    <h4>🌙 Always Remove Fully at Night</h4>
+    <p>Setting mists create a film-forming layer that requires thorough removal. Always double cleanse in the evening: micellar water first to dissolve the film, followed by your gel cleanser. Leaving setting mist residue on sensitized skin overnight can clog pores and aggravate barrier disruption. Clean skin = better barrier repair while you sleep.</p>
+  </div>
 </div>
 </section>
 
@@ -786,6 +990,22 @@
       <div class="step-product">Second Date Loose Powder — Translucent</div>
       <div class="step-desc">Fluffy brush, light dusting over T-zone only. Under-eye baking optional: press with damp sponge, wait 2–3 min, brush off. Avoid heavy powdering on cheeks or sensitized patches — keep those naturally dewy. <strong>Phase 2–3 only.</strong></div>
       <span class="step-tip">✨ Light hand with powder = natural finish</span>
+    </div>
+  </div>
+  <div class="step-connector"></div>
+
+  <div class="routine-step">
+    <div class="step-num">9</div>
+    <div class="step-content">
+      <div class="step-header"><div class="step-title">Lock &amp; Finish with Setting Mists</div><span class="rphase-badge rp-finish">Finish Phase</span></div>
+      <div class="step-product">L'Oréal Infallible 3-Second Setting Mist → then PIXY Aqua-Beauty Matte-Finish Mist</div>
+      <div class="step-desc">
+        The final two-step seal that locks your entire look in place:<br>
+        <strong>1. LOREAL mist first</strong> — hold 25–30cm away, spray in "X + T" motion, air-dry 10–15 sec. This bonds all makeup layers together.<br>
+        <strong>2. PIXY mist second</strong> — hold 20–25cm away, same "X + T" pattern, air-dry fully. Adds matte-control and UV protection on top.<br>
+        <strong>Everyday morning:</strong> LOREAL only is enough. <strong>Full glam / outdoor / long day:</strong> both mists for maximum hold and shine-control.
+      </div>
+      <span class="step-tip">🔒 Lock first (LOREAL) → Finish second (PIXY)</span>
     </div>
   </div>
 </div>
@@ -902,7 +1122,7 @@
     <div class="reapply-card">
       <div class="reapply-icon">🌫️</div>
       <h3>Step 4 — Set &amp; Finish <span style="font-size:.72rem;color:var(--text3)">(Finish Phase · Phase 2–3)</span></h3>
-      <p>Whisper of <strong>Second Date Translucent Powder</strong> over T-zone with a small travel brush. Resets finish without adding thickness. If skin looks dry in patches, skip powder entirely — press a tiny amount of Ceramic Gel on those spots before cushion touch-up instead.</p>
+      <p>After cushion touch-up: spray <strong>Bening's SPF spray</strong> first, pat in gently. Then mist with <strong>PIXY Aqua-Beauty Matte Mist</strong> to re-mattify and refresh the whole face. Skip the LOREAL mist for mid-day touch-ups — it's a setting spray best used on fresh makeup, not over worn layers.</p>
     </div>
     <div class="reapply-card">
       <div class="reapply-icon">💧</div>
@@ -916,9 +1136,9 @@
         <li>Bening's Sunscreen Spray (non-negotiable)</li>
         <li>Blotting papers / oil control film</li>
         <li>TIRTIR or Skintific cushion (travel size)</li>
-        <li>Second Date Loose Powder (travel jar)</li>
-        <li>Small fluffy brush</li>
+        <li>PIXY Aqua-Beauty Matte Mist (re-mattify mid-day)</li>
         <li>ONLYOU BB Concealer for spot touch-ups</li>
+        <li>Small fluffy brush + Second Date powder</li>
       </ul>
     </div>
   </div>
@@ -946,7 +1166,7 @@
     document.documentElement.setAttribute('data-theme', el.checked ? 'dark' : 'light');
     document.getElementById('toggle-label').textContent = el.checked ? 'Dark' : 'Light';
   }
-  const sectionIds = ['skin-info','phases','skincare','makeup','morning','evening','midday'];
+  const sectionIds = ['skin-info','phases','skincare','makeup','makeup-routine','morning','evening','midday'];
   function showSection(id) {
     sectionIds.forEach(sid => document.getElementById(sid).classList.remove('active'));
     document.getElementById(id).classList.add('active');
