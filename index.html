@@ -235,6 +235,25 @@
   .suit-warn{font-size:.74rem;color:#c0602a;line-height:1.5;font-weight:500}
   [data-theme="dark"] .suit-warn{color:#e07840}
 
+  /* ── SKIN CONDITION CHECK BLOCK ── */
+  .skin-check-box{background:linear-gradient(135deg,#e8f1fd,#d2e4fa);border:1.5px solid var(--border2);border-left:4px solid var(--royal);border-radius:14px;padding:18px 20px;margin-bottom:20px;transition:background .4s}
+  [data-theme="dark"] .skin-check-box{background:var(--step-bg);border-color:var(--border2);border-left-color:var(--royal)}
+  .skin-check-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:10px}
+  .skin-check-card{background:rgba(255,255,255,.55);border-radius:12px;padding:12px;border:1px solid var(--border2);transition:background .4s,border-color .4s}
+  [data-theme="dark"] .skin-check-card{background:rgba(255,255,255,.06);border-color:var(--border)}
+  .skin-check-label{font-weight:700;font-size:.75rem;margin-bottom:5px}
+  .skin-check-label.flare{color:#c0392b}[data-theme="dark"] .skin-check-label.flare{color:#e07060}
+  .skin-check-label.sensitive{color:#e67e22}[data-theme="dark"] .skin-check-label.sensitive{color:#e09040}
+  .skin-check-label.stable{color:#2e7d52}[data-theme="dark"] .skin-check-label.stable{color:#4aad78}
+  .skin-check-label.thriving{color:var(--royal)}
+
+  /* ── REACTION PROTOCOL BLOCK ── */
+  .reaction-box{background:linear-gradient(135deg,#fdebd0,#fde8cc);border:1.5px solid #f0c090;border-left:4px solid #c0602a;border-radius:14px;padding:18px 20px;margin-top:16px;transition:background .4s,border-color .4s}
+  [data-theme="dark"] .reaction-box{background:linear-gradient(135deg,#2a1200,#301808);border-color:#6a3010;border-left-color:#e07840}
+  .reaction-box h4{color:#c0602a;font-size:.9rem;font-weight:600;margin-bottom:8px}
+  [data-theme="dark"] .reaction-box h4{color:#e07840}
+  .reaction-box li{font-size:.8rem;color:var(--text2);margin-bottom:4px;line-height:1.5}
+
   footer{text-align:center;padding:40px 20px 60px;color:var(--text3);font-size:.78rem;border-top:1px solid var(--divider);margin-top:20px}
   footer span{color:var(--sky)}
 
@@ -831,24 +850,24 @@
   <div class="section-divider"></div>
 
   <!-- SKIN CHECK GATE -->
-  <div style="background:linear-gradient(135deg,#e8f1fd,#d2e4fa);border:1.5px solid var(--border2);border-left:4px solid var(--royal);border-radius:14px;padding:18px 20px;margin-bottom:20px">
+  <div class="skin-check-box">
     <h4 style="color:var(--royal);font-size:.9rem;font-weight:600;margin-bottom:10px">🔍 Start Here — Daily Skin Condition Check</h4>
     <p style="font-size:.82rem;color:var(--text2);line-height:1.65;margin-bottom:12px">Before picking up a single product, assess your skin honestly. Your routine today depends on how your skin feels <em>right now</em>, not how it felt yesterday.</p>
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:10px">
-      <div style="background:rgba(255,255,255,.5);border-radius:12px;padding:12px;border:1px solid #a8c8f0">
-        <div style="font-weight:700;font-size:.75rem;color:#c0392b;margin-bottom:5px">🔴 FLARE DAY</div>
+    <div class="skin-check-grid">
+      <div class="skin-check-card">
+        <div class="skin-check-label flare">🔴 FLARE DAY</div>
         <div style="font-size:.73rem;color:var(--text2);line-height:1.5">Stinging, hot, visibly red, or reactive skin.<br><strong>Rule:</strong> ESQA Skin Tint only — or no makeup at all. Skip cushion, concealer, powder, and all mists. Skin needs air.</div>
       </div>
-      <div style="background:rgba(255,255,255,.5);border-radius:12px;padding:12px;border:1px solid #a8c8f0">
-        <div style="font-weight:700;font-size:.75rem;color:#e67e22;margin-bottom:5px">🟠 SENSITIVE DAY</div>
+      <div class="skin-check-card">
+        <div class="skin-check-label sensitive">🟠 SENSITIVE DAY</div>
         <div style="font-size:.73rem;color:var(--text2);line-height:1.5">Mild tightness or slight reactivity but manageable.<br><strong>Rule:</strong> ESQA + TIRTIR cushion (TIRTIR is better tolerated than Skintific on reactive days). ONLYOU spot only. Skip powder. LOREAL mist from extra distance only.</div>
       </div>
-      <div style="background:rgba(255,255,255,.5);border-radius:12px;padding:12px;border:1px solid #a8c8f0">
-        <div style="font-weight:700;font-size:.75rem;color:#2e7d52;margin-bottom:5px">🟢 STABLE DAY</div>
+      <div class="skin-check-card">
+        <div class="skin-check-label stable">🟢 STABLE DAY</div>
         <div style="font-size:.73rem;color:var(--text2);line-height:1.5">Skin feels calm, comfortable, and hydrated.<br><strong>Rule:</strong> Full routine available. Choose coverage level freely. All products can be used as directed.</div>
       </div>
-      <div style="background:rgba(255,255,255,.5);border-radius:12px;padding:12px;border:1px solid #a8c8f0">
-        <div style="font-weight:700;font-size:.75rem;color:#1a4dc2;margin-bottom:5px">✨ THRIVING DAY</div>
+      <div class="skin-check-card">
+        <div class="skin-check-label thriving">✨ THRIVING DAY</div>
         <div style="font-size:.73rem;color:var(--text2);line-height:1.5">Bouncy, radiant, fully comfortable skin (Phase 3).<br><strong>Rule:</strong> Full glam available — all products, both mists. You've earned it.</div>
       </div>
     </div>
@@ -1052,16 +1071,16 @@
   </div>
 
   <!-- FLARE RECOVERY PROTOCOL -->
-  <div style="background:linear-gradient(135deg,#fdebd0,#fde8cc);border:1.5px solid #f0c090;border-left:4px solid #c0602a;border-radius:14px;padding:18px 20px;margin-top:16px">
-    <h4 style="color:#c0602a;font-size:.9rem;font-weight:600;margin-bottom:8px">🚨 Mid-Makeup Reaction Protocol</h4>
+  <div class="reaction-box">
+    <h4>🚨 Mid-Makeup Reaction Protocol</h4>
     <p style="font-size:.82rem;color:var(--text2);line-height:1.65;margin-bottom:8px">If skin starts stinging, burning, or turning red <em>while</em> applying makeup:</p>
     <ul style="padding-left:16px">
-      <li style="font-size:.8rem;color:var(--text2);margin-bottom:4px;line-height:1.5"><strong>Stop immediately</strong> — do not continue applying more product hoping it improves.</li>
-      <li style="font-size:.8rem;color:var(--text2);margin-bottom:4px;line-height:1.5"><strong>Remove gently</strong> — use micellar water on a soft cotton pad, pressing and lifting (not wiping).</li>
-      <li style="font-size:.8rem;color:var(--text2);margin-bottom:4px;line-height:1.5"><strong>Apply Centella Ampoule</strong> generously across the entire face — this is your emergency calming treatment.</li>
-      <li style="font-size:.8rem;color:var(--text2);margin-bottom:4px;line-height:1.5"><strong>Identify the trigger</strong> — note which product you last applied before the reaction started.</li>
-      <li style="font-size:.8rem;color:var(--text2);margin-bottom:4px;line-height:1.5"><strong>Let skin breathe</strong> — apply Glad2Glow Ceramide Moisturizer and nothing else. Rest the barrier.</li>
-      <li style="font-size:.8rem;color:var(--text2);margin-bottom:4px;line-height:1.5"><strong>Avoid that product</strong> for at least 2 weeks before cautiously re-patch-testing.</li>
+      <li><strong>Stop immediately</strong> — do not continue applying more product hoping it improves.</li>
+      <li><strong>Remove gently</strong> — use micellar water on a soft cotton pad, pressing and lifting (not wiping).</li>
+      <li><strong>Apply Centella Ampoule</strong> generously across the entire face — this is your emergency calming treatment.</li>
+      <li><strong>Identify the trigger</strong> — note which product you last applied before the reaction started.</li>
+      <li><strong>Let skin breathe</strong> — apply Glad2Glow Ceramide Moisturizer and nothing else. Rest the barrier.</li>
+      <li><strong>Avoid that product</strong> for at least 2 weeks before cautiously re-patch-testing.</li>
     </ul>
   </div>
 </div>
