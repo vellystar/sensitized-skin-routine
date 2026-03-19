@@ -527,8 +527,11 @@ main{
 /* ═══════════════════════════════════════
    SUITABILITY TABLE
 ═══════════════════════════════════════ */
-.suit-table-wrap{overflow-x:auto;border-radius:var(--radius)}
-.suit-table{width:100%;border-collapse:collapse;font-size:.8rem;min-width:560px}
+.suit-table-wrap{
+  overflow-x:auto;
+  border-radius:var(--radius);
+  -webkit-overflow-scrolling:touch}
+.suit-table{width:100%;border-collapse:collapse;font-size:.8rem;min-width:580px}
 .suit-table th{padding:11px 14px;text-align:left;
   background:linear-gradient(135deg,var(--royal),var(--royal-mid));
   color:white;font-weight:600;font-size:.72rem;text-transform:uppercase;letter-spacing:.05em}
@@ -544,6 +547,57 @@ main{
 [data-theme="dark"] .suit-good{color:var(--sky)}
 .suit-caution{color:#c09020;font-weight:600}
 [data-theme="dark"] .suit-caution{color:#e8c97a}
+
+/* ── MOBILE CARD LAYOUT for suitability table ── */
+@media(max-width:699px){
+  #suitTableWrap{overflow:visible;border-radius:var(--radius)}
+  .suit-table,
+  .suit-table thead,
+  .suit-table tbody,
+  .suit-table th,
+  .suit-table td,
+  .suit-table tr{display:block;width:100%}
+  .suit-table thead{display:none}
+  .suit-table tbody tr{
+    background:var(--surface);
+    border:1px solid var(--border);
+    border-radius:var(--radius-sm);
+    margin-bottom:12px;
+    padding:4px 0;
+    box-shadow:var(--shadow);
+    min-width:0}
+  .suit-table tbody tr:last-child{margin-bottom:0}
+  .suit-table td{
+    padding:9px 14px;
+    border-bottom:1px dashed var(--border);
+    display:flex;
+    flex-direction:column;
+    gap:3px;
+    min-width:0}
+  .suit-table td:last-child{border-bottom:none}
+  .suit-table td::before{
+    content:attr(data-label);
+    font-family:'DM Sans',sans-serif;
+    font-size:.62rem;font-weight:700;
+    text-transform:uppercase;letter-spacing:.06em;
+    color:var(--text-soft);
+    display:block;margin-bottom:2px}
+  /* first td = product name — give it accent treatment */
+  .suit-table td:first-child{
+    background:linear-gradient(135deg,rgba(91,141,238,.08),rgba(26,60,143,.04));
+    border-radius:var(--radius-sm) var(--radius-sm) 0 0;
+    border-bottom:1px solid var(--border)}
+  .suit-table td:first-child strong{
+    font-size:.84rem;color:var(--royal);line-height:1.4;
+    word-break:break-word}
+  [data-theme="dark"] .suit-table td:first-child strong{color:var(--sky)}
+  /* all other tds */
+  .suit-table td:not(:first-child){font-size:.78rem;color:var(--text-mid);line-height:1.55}
+  .suit-table tr:hover td{background:transparent}
+  .suit-table tr:hover td:first-child{
+    background:linear-gradient(135deg,rgba(91,141,238,.12),rgba(26,60,143,.06))}
+  .suit-table{min-width:0}
+}
 
 /* ═══════════════════════════════════════
    TIP BOX
@@ -724,11 +778,6 @@ footer span{color:var(--accent)}
   .tip-box{padding:14px 16px}
   .tip-box h4{font-size:.78rem}
   .tip-box ul li{font-size:.75rem}
-
-  .suit-table-wrap{border-radius:var(--radius-sm)}
-  .suit-table{font-size:.72rem;min-width:480px}
-  .suit-table th{font-size:.65rem;padding:9px 10px}
-  .suit-table td{padding:8px 10px;font-size:.72rem}
 
   footer{padding:26px 12px}
   footer p{font-size:.72rem}
@@ -1858,7 +1907,7 @@ footer span{color:var(--accent)}
         <div class="sub">When to use, when to avoid, and phase-by-phase compatibility</div>
       </div>
     </div>
-    <div class="glass suit-table-wrap reveal" style="padding:0;overflow:hidden;">
+    <div class="glass suit-table-wrap reveal" id="suitTableWrap" style="padding:0;overflow:visible;">
       <table class="suit-table">
         <thead><tr>
           <th>Product</th><th>Phase Safety</th><th>Best Time</th><th>Notes</th>
@@ -1907,8 +1956,20 @@ footer span{color:var(--accent)}
 
 <script>
 /* ═══════════════════════════════════════
-   DARK MODE
+   SUITABILITY TABLE — MOBILE LABELS
+   Inject data-label onto each <td> from <th> headers
 ═══════════════════════════════════════ */
+(function(){
+  const table = document.querySelector('.suit-table');
+  if (!table) return;
+  const headers = Array.from(table.querySelectorAll('thead th'))
+    .map(th => th.textContent.trim());
+  table.querySelectorAll('tbody tr').forEach(row => {
+    Array.from(row.querySelectorAll('td')).forEach((td, i) => {
+      if (headers[i]) td.setAttribute('data-label', headers[i]);
+    });
+  });
+})();
 const html = document.documentElement;
 const toggle = document.getElementById('darkToggle');
 const label  = document.getElementById('themeLabel');
