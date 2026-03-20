@@ -124,71 +124,109 @@ img{max-width:100%}
 [data-theme="dark"] .nav-logo{color:var(--sky)}
 .nav-right{display:flex;align-items:center;gap:10px}
 .toggle-label{font-size:.72rem;color:var(--text-soft);font-weight:500}
-.dark-toggle{width:46px;height:25px;border-radius:999px;background:var(--sky);
+.dark-toggle{
+  width:52px;height:28px;border-radius:999px;background:var(--sky);
   border:none;cursor:pointer;position:relative;transition:background .3s;
-  box-shadow:inset 0 2px 4px rgba(0,0,0,.15);flex-shrink:0}
+  box-shadow:inset 0 2px 4px rgba(0,0,0,.15);flex-shrink:0;
+  touch-action:manipulation;-webkit-tap-highlight-color:transparent}
 [data-theme="dark"] .dark-toggle{background:var(--royal-mid)}
-.dark-toggle::after{content:'';position:absolute;top:3px;left:3px;
-  width:19px;height:19px;border-radius:50%;background:white;
+/* sliding thumb */
+.dark-toggle::after{
+  content:'';position:absolute;top:4px;left:4px;
+  width:20px;height:20px;border-radius:50%;background:white;
   transition:transform .3s ease;box-shadow:0 2px 4px rgba(0,0,0,.2)}
-[data-theme="dark"] .dark-toggle::after{transform:translateX(21px);background:var(--sky-light)}
+[data-theme="dark"] .dark-toggle::after{transform:translateX(24px);background:var(--sky-light)}
+/* ☀️ icon — shown in light mode (left side) */
+.dark-toggle::before{
+  content:'☀️';
+  position:absolute;right:6px;top:50%;transform:translateY(-50%);
+  font-size:.72rem;line-height:1;
+  opacity:1;transition:opacity .2s}
+[data-theme="dark"] .dark-toggle::before{
+  content:'🌙';
+  right:auto;left:6px}
 
 /* ═══════════════════════════════════════
-   SECTION NAV — MOBILE-FIRST FIX
+   HAMBURGER MENU
 ═══════════════════════════════════════ */
+:root{--secnav-h:0px}  /* no longer takes up height in flow */
+
+/* hamburger button — lives in topnav */
+.hamburger{
+  width:40px;height:40px;border-radius:var(--radius-sm);
+  background:transparent;border:1.5px solid var(--border);
+  cursor:pointer;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;gap:5px;
+  padding:0;flex-shrink:0;
+  transition:background .2s,border-color .2s;
+  touch-action:manipulation;-webkit-tap-highlight-color:transparent}
+.hamburger:hover{background:var(--surface2);border-color:var(--accent)}
+.hamburger.open{background:var(--royal);border-color:var(--royal)}
+[data-theme="dark"] .hamburger.open{background:var(--royal-light);border-color:var(--royal-light)}
+.ham-line{
+  width:18px;height:2px;border-radius:2px;
+  background:var(--text-mid);
+  transition:transform .28s ease,opacity .2s,width .2s}
+[data-theme="dark"] .ham-line{background:var(--text-mid)}
+.hamburger.open .ham-line{background:white}
+.hamburger.open .ham-line:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.hamburger.open .ham-line:nth-child(2){opacity:0;width:0}
+.hamburger.open .ham-line:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+/* dropdown panel */
 .sec-nav{
-  position:sticky;
-  top:var(--nav-h);
+  position:fixed;
+  top:var(--nav-h);right:0;
   z-index:190;
-  height:var(--secnav-h);
-  background:var(--surface2);
-  backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);
-  border-bottom:1px solid var(--border);
-  transition:background .4s;
-  /* critical mobile scroll fix */
-  overflow-x:auto;
-  overflow-y:hidden;
-  -webkit-overflow-scrolling:touch;
-  overscroll-behavior-x:contain;
-  scrollbar-width:none;
-  -ms-overflow-style:none;
-}
-.sec-nav::-webkit-scrollbar{display:none}
+  width:220px;
+  background:var(--surface);
+  backdrop-filter:blur(24px) saturate(180%);-webkit-backdrop-filter:blur(24px) saturate(180%);
+  border:1px solid var(--border);
+  border-top:none;
+  border-radius:0 0 var(--radius) var(--radius);
+  box-shadow:0 12px 40px rgba(26,60,143,.18);
+  padding:10px 10px 14px;
+  transition:opacity .24s ease,transform .24s ease,background .4s;
+  /* hidden by default */
+  opacity:0;pointer-events:none;
+  transform:translateY(-10px)}
+[data-theme="dark"] .sec-nav{box-shadow:0 12px 40px rgba(0,0,0,.48)}
+.sec-nav.open{opacity:1;pointer-events:auto;transform:translateY(0)}
+
+/* overlay to close on outside tap */
+.sec-nav-overlay{
+  display:none;position:fixed;inset:0;z-index:180}
+.sec-nav-overlay.open{display:block}
+
+/* nav items */
 .sec-nav-inner{
-  display:flex;
-  align-items:center;
-  gap:4px;
-  padding:8px 16px;
-  height:100%;
-  width:max-content;
-  min-width:100%;
-}
+  display:flex;flex-direction:column;gap:3px}
 .sec-btn{
-  display:inline-flex;align-items:center;gap:5px;
-  padding:6px 14px;border-radius:999px;
-  font-size:.75rem;font-weight:500;white-space:nowrap;
+  display:flex;align-items:center;gap:9px;
+  width:100%;padding:9px 14px;border-radius:var(--radius-sm);
+  font-size:.8rem;font-weight:500;white-space:nowrap;
   color:var(--text-mid);background:transparent;
-  border:1.5px solid transparent;cursor:pointer;
-  transition:all .22s ease;
-  user-select:none;-webkit-user-select:none;
-  flex-shrink:0;
-  /* touch-friendly tap target */
-  min-height:34px;
-}
-.sec-btn:active{transform:scale(.96)}
-.sec-btn:hover{background:var(--surface);color:var(--royal);border-color:var(--border)}
+  border:none;cursor:pointer;text-align:left;
+  transition:background .18s,color .18s;
+  touch-action:manipulation;-webkit-tap-highlight-color:transparent;
+  min-height:40px;font-family:'Outfit',sans-serif}
+.sec-btn:hover{background:var(--surface2);color:var(--text)}
 [data-theme="dark"] .sec-btn:hover{color:var(--sky)}
 .sec-btn.active{
-  background:var(--royal);color:white;border-color:var(--royal);
-  box-shadow:0 4px 14px rgba(26,60,143,.35)}
-[data-theme="dark"] .sec-btn.active{background:var(--royal-light);border-color:var(--royal-light)}
+  background:linear-gradient(135deg,var(--royal),var(--royal-light));
+  color:white;
+  font-weight:600;
+  box-shadow:0 3px 10px rgba(26,60,143,.28)}
+[data-theme="dark"] .sec-btn.active{
+  background:linear-gradient(135deg,var(--royal-light),var(--accent))}
+.sec-btn:active{transform:scale(.97)}
 
 /* ═══════════════════════════════════════
    MAIN
 ═══════════════════════════════════════ */
 main{
   position:relative;z-index:1;
-  padding-top:calc(var(--nav-h) + var(--secnav-h) + 4px);
+  padding-top:calc(var(--nav-h) + 20px);
   max-width:1120px;margin:0 auto;
   padding-left:18px;padding-right:18px;padding-bottom:80px}
 
@@ -942,12 +980,12 @@ footer span{color:var(--accent)}
    RESPONSIVE — MOBILE (max 599px)
 ═══════════════════════════════════════ */
 @media(max-width:599px){
-  :root{--nav-h:54px;--secnav-h:44px;--radius:16px;--radius-sm:10px}
+  :root{--nav-h:54px;--radius:16px;--radius-sm:10px}
 
   /* ── LAYOUT ── */
   main{
     padding-left:12px;padding-right:12px;
-    padding-top:calc(var(--nav-h) + var(--secnav-h) + 2px);
+    padding-top:calc(var(--nav-h) + 16px);
     padding-bottom:60px}
 
   /* ── HERO ── */
@@ -966,8 +1004,9 @@ footer span{color:var(--accent)}
   /* ── NAV ── */
   .nav{padding:0 14px}
   .nav-logo{font-size:1rem}
-  .toggle-label{display:none}  /* hide "Light/Dark" label on mobile */
-  .sec-btn{font-size:.7rem;padding:5px 11px;min-height:30px}
+  .toggle-label{display:none}
+  .hamburger{width:36px;height:36px}
+  .ham-line{width:16px}
 
   /* ── PRODUCT CARDS — horizontal strip ── */
   .products-grid{gap:14px}
@@ -1115,10 +1154,18 @@ footer span{color:var(--accent)}
   <div class="nav-right">
     <span class="toggle-label" id="themeLabel">Dark</span>
     <button class="dark-toggle" id="darkToggle" aria-label="Toggle dark mode"></button>
+    <button class="hamburger" id="hamburger" aria-label="Open navigation" aria-expanded="false">
+      <span class="ham-line"></span>
+      <span class="ham-line"></span>
+      <span class="ham-line"></span>
+    </button>
   </div>
 </nav>
 
-<!-- SECTION NAV -->
+<!-- OVERLAY (closes menu on outside tap) -->
+<div class="sec-nav-overlay" id="secNavOverlay"></div>
+
+<!-- SECTION NAV DROPDOWN -->
 <nav class="sec-nav" id="secNav" role="navigation" aria-label="Jump to section">
   <div class="sec-nav-inner" id="secNavInner">
     <button class="sec-btn active" data-target="skin-info">🩺 Skin Info</button>
@@ -2593,12 +2640,38 @@ toggle.addEventListener('click', () => {
 });
 
 /* ═══════════════════════════════════════
-   SECTION NAV — MOBILE-PROOF
+   HAMBURGER MENU
+═══════════════════════════════════════ */
+const hamburger   = document.getElementById('hamburger');
+const secNav      = document.getElementById('secNav');
+const secOverlay  = document.getElementById('secNavOverlay');
+
+function openMenu() {
+  secNav.classList.add('open');
+  secOverlay.classList.add('open');
+  hamburger.classList.add('open');
+  hamburger.setAttribute('aria-expanded', 'true');
+}
+function closeMenu() {
+  secNav.classList.remove('open');
+  secOverlay.classList.remove('open');
+  hamburger.classList.remove('open');
+  hamburger.setAttribute('aria-expanded', 'false');
+}
+function toggleMenu() {
+  secNav.classList.contains('open') ? closeMenu() : openMenu();
+}
+
+hamburger.addEventListener('click', e => { e.stopPropagation(); toggleMenu(); });
+secOverlay.addEventListener('click', closeMenu);
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeMenu(); });
+
+/* ═══════════════════════════════════════
+   SECTION NAV — SCROLL & ACTIVE
 ═══════════════════════════════════════ */
 function getNavOffset() {
-  const topH   = document.getElementById('topNav')?.offsetHeight  || 60;
-  const secH   = document.getElementById('secNav')?.offsetHeight   || 50;
-  return topH + secH + 12;
+  const topH = document.getElementById('topNav')?.offsetHeight || 60;
+  return topH + 16;
 }
 
 function scrollToSection(id) {
@@ -2613,26 +2686,14 @@ function setActiveBtn(id) {
   document.querySelectorAll('.sec-btn').forEach(b => {
     b.classList.toggle('active', b.dataset.target === id);
   });
-  // scroll active button into view within the sec-nav bar
-  const activeBtn = document.querySelector(`.sec-btn[data-target="${id}"]`);
-  if (activeBtn) {
-    const nav = document.getElementById('secNav');
-    const inner = document.getElementById('secNavInner');
-    if (nav && inner) {
-      const btnLeft  = activeBtn.offsetLeft;
-      const btnWidth = activeBtn.offsetWidth;
-      const navWidth = nav.offsetWidth;
-      const target   = btnLeft - (navWidth / 2) + (btnWidth / 2);
-      nav.scrollTo({ left: Math.max(0, target), behavior: 'smooth' });
-    }
-  }
 }
 
-// Button click → scroll to section
+// Button click → scroll to section + close menu
 document.querySelectorAll('.sec-btn').forEach(btn => {
   btn.addEventListener('click', () => {
     const id = btn.dataset.target;
     setActiveBtn(id);
+    closeMenu();
     scrollToSection(id);
   });
 });
