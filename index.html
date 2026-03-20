@@ -552,6 +552,97 @@ main{
 .tag-purple{background:rgba(160,80,220,.1);border-color:rgba(160,80,220,.3);color:#8040b8}
 [data-theme="dark"] .tag-purple{color:#c898f8}
 
+/* ── SHADE SECTION ── */
+.shade-section{
+  margin-bottom:10px;
+  padding:10px 14px 12px;
+  background:var(--surface2);
+  border:1px solid var(--border);
+  border-radius:var(--radius-sm);
+  transition:background .4s}
+.shade-section-header{
+  display:flex;align-items:center;gap:6px;
+  margin-bottom:10px}
+.shade-section-label{
+  font-size:.62rem;font-weight:700;text-transform:uppercase;
+  letter-spacing:.07em;color:var(--text-soft);
+  font-family:'DM Sans',sans-serif}
+.shade-section-count{
+  font-size:.6rem;color:var(--text-muted);
+  font-family:'Outfit',sans-serif;
+  margin-left:auto}
+
+/* swatch grid */
+.shade-swatches{
+  display:flex;flex-wrap:wrap;
+  gap:8px 10px}
+.shade-swatch{
+  display:flex;flex-direction:column;
+  align-items:center;gap:4px;
+  cursor:default;
+  position:relative}
+.swatch-dot{
+  width:28px;height:28px;border-radius:50%;
+  border:2px solid rgba(255,255,255,.25);
+  box-shadow:0 2px 6px rgba(0,0,0,.18);
+  flex-shrink:0;
+  transition:transform .2s,box-shadow .2s}
+.shade-swatch:hover .swatch-dot{
+  transform:scale(1.12);
+  box-shadow:0 4px 12px rgba(0,0,0,.28)}
+.swatch-name{
+  font-size:.6rem;font-weight:500;
+  font-family:'DM Sans',sans-serif;
+  color:var(--text-soft);
+  text-align:center;
+  max-width:54px;
+  line-height:1.2;
+  word-break:break-word}
+
+/* owned swatch */
+.shade-swatch.owned .swatch-dot{
+  border:2.5px solid var(--accent);
+  box-shadow:0 0 0 3px rgba(91,141,238,.25),0 2px 8px rgba(0,0,0,.22)}
+[data-theme="dark"] .shade-swatch.owned .swatch-dot{
+  border-color:var(--sky);
+  box-shadow:0 0 0 3px rgba(168,200,240,.22),0 2px 8px rgba(0,0,0,.35)}
+.shade-swatch.owned .swatch-name{
+  color:var(--accent);
+  font-weight:700}
+[data-theme="dark"] .shade-swatch.owned .swatch-name{
+  color:var(--sky)}
+/* ✦ owned star badge */
+.shade-swatch.owned::after{
+  content:'✦';
+  position:absolute;top:-4px;right:-4px;
+  width:14px;height:14px;border-radius:50%;
+  background:var(--accent);color:white;
+  font-size:.45rem;font-weight:700;
+  display:flex;align-items:center;justify-content:center;
+  line-height:1;
+  box-shadow:0 1px 4px rgba(0,0,0,.25)}
+[data-theme="dark"] .shade-swatch.owned::after{
+  background:var(--sky);color:var(--bg)}
+
+/* "more shades" chip */
+.shade-more{
+  display:inline-flex;align-items:center;
+  padding:3px 10px;border-radius:999px;
+  font-size:.62rem;font-weight:500;
+  font-family:'DM Sans',sans-serif;
+  color:var(--text-muted);
+  border:1px dashed var(--border);
+  align-self:center;margin-top:4px}
+
+@media(max-width:599px){
+  .shade-section{padding:8px 10px 10px}
+  .shade-swatches{gap:6px 8px}
+  .swatch-dot{width:24px;height:24px}
+  .swatch-name{font-size:.55rem;max-width:44px}
+  .shade-section-label{font-size:.58rem}
+  .shade-swatch.owned::after{width:12px;height:12px;font-size:.4rem;top:-3px;right:-3px}
+}
+
 .product-section{margin-bottom:9px}
 .product-section h5{
   font-size:.67rem;font-weight:700;text-transform:uppercase;
@@ -1692,6 +1783,7 @@ footer span{color:var(--accent)}
               <span class="tag tag-green">Serum-Infused</span>
               <span class="tag tag-blue">Sheer Coverage</span>
             </div>
+            <div class="shade-section"><div class="shade-section-header"><span class="shade-section-label">🎨 Shades</span><span class="shade-section-count">4 shades</span></div><div class="shade-swatches"><div class="shade-swatch owned"><div class="swatch-dot" style="background:#f0d8b0"></div><span class="swatch-name">Vanilla</span></div><div class="shade-swatch"><div class="swatch-dot" style="background:#e8c898"></div><span class="swatch-name">Milkshake</span></div><div class="shade-swatch"><div class="swatch-dot" style="background:#d4aa70"></div><span class="swatch-name">Custard</span></div><div class="shade-swatch"><div class="swatch-dot" style="background:#b88050"></div><span class="swatch-name">Macchiato</span></div></div></div>
             <div class="size-row"><span class="size-label">Sizes:</span><span class="size-pill">35 ml — ~Rp145–185k</span></div>
             <div class="product-section"><h5>Formula &amp; Benefits</h5><ul>
               <li>Serum-infused base provides skincare benefits while wearing</li>
@@ -1732,6 +1824,7 @@ footer span{color:var(--accent)}
               <span class="tag tag-pink">Medium–Full Coverage</span>
               <span class="tag tag-blue">Dewy Finish</span>
             </div>
+            <div class="shade-section"><div class="shade-section-header"><span class="shade-section-label">🎨 Shades</span><span class="shade-section-count">5 shades</span></div><div class="shade-swatches"><div class="shade-swatch"><div class="swatch-dot" style="background:#f5e4d0"></div><span class="swatch-name">00 Porcelain</span></div><div class="shade-swatch owned"><div class="swatch-dot" style="background:#efd4a8"></div><span class="swatch-name">01 Vanilla</span></div><div class="shade-swatch"><div class="swatch-dot" style="background:#e0c090"></div><span class="swatch-name">02 Ivory</span></div><div class="shade-swatch"><div class="swatch-dot" style="background:#d4a878"></div><span class="swatch-name">03 Petal</span></div><div class="shade-swatch"><div class="swatch-dot" style="background:#c49060"></div><span class="swatch-name">04 Beige</span></div></div></div>
             <div class="size-row"><span class="size-label">Sizes:</span><span class="size-pill">11 g / 11 ml — ~Rp185–240k</span></div>
             <div class="product-section"><h5>Formula &amp; Benefits</h5><ul>
               <li>Skin-caring formula with skincare actives blended in for comfort</li>
@@ -1768,6 +1861,7 @@ footer span{color:var(--accent)}
               <span class="tag tag-pink">Full Coverage</span>
               <span class="tag tag-blue">Long-Wearing</span>
             </div>
+            <div class="shade-section"><div class="shade-section-header"><span class="shade-section-label">🎨 Shades</span><span class="shade-section-count">40 shades globally</span></div><div class="shade-swatches"><div class="shade-swatch owned"><div class="swatch-dot" style="background:#f8ece0"></div><span class="swatch-name">17C Porcelain</span></div><div class="shade-swatch"><div class="swatch-dot" style="background:#f0d8c0"></div><span class="swatch-name">21N Ivory</span></div><div class="shade-swatch"><div class="swatch-dot" style="background:#e4c8a0"></div><span class="swatch-name">23N Sand</span></div><div class="shade-swatch"><div class="swatch-dot" style="background:#d8b888"></div><span class="swatch-name">25N Linen</span></div><div class="shade-swatch"><div class="swatch-dot" style="background:#cca870"></div><span class="swatch-name">27N Buff</span></div><div class="shade-swatch"><div class="swatch-dot" style="background:#c09060"></div><span class="swatch-name">29N Cashew</span></div><div class="shade-more">+34 more</div></div></div>
             <div class="size-row"><span class="size-label">Sizes:</span><span class="size-pill">18 g (full) — ~Rp230–310k</span><span class="size-pill">4.5 g (mini/refill) — ~Rp120–160k</span></div>
             <div class="product-section"><h5>Formula &amp; Benefits</h5><ul>
               <li>"Mask fit" technology — adheres to skin texture for a seamless, skin-like finish</li>
@@ -1941,7 +2035,8 @@ footer span{color:var(--accent)}
               <span class="tag tag-gold">Muted Mauve-Rose</span>
               <span class="tag tag-green">Intensive Care</span>
             </div>
-            <div class="product-section"><h5>Formula &amp; Benefits</h5><ul>
+            <div class="shade-section"><div class="shade-section-header"><span class="shade-section-label">🎨 Shades</span><span class="shade-section-count">4 shades</span></div><div class="shade-swatches"><div class="shade-swatch owned"><div class="swatch-dot" style="background:#c07878"></div><span class="swatch-name">Smoky Rose</span></div><div class="shade-swatch"><div class="swatch-dot" style="background:#d49090"></div><span class="swatch-name">Natural Rose</span></div><div class="shade-swatch"><div class="swatch-dot" style="background:#b84060"></div><span class="swatch-name">Raspberry Rose</span></div><div class="shade-swatch"><div class="swatch-dot" style="background:#9c2030"></div><span class="swatch-name">Cherry</span></div></div></div>
+          <div class="product-section"><h5>Formula &amp; Benefits</h5><ul>
               <li>Rich butter-like formula deeply nourishes and repairs dry or chapped lips</li>
               <li>Smoky Rose is a muted, cool-toned rose — elegant and naturally flattering</li>
               <li>Long-lasting moisture; doesn't require constant reapplication</li>
@@ -1976,7 +2071,8 @@ footer span{color:var(--accent)}
               <span class="tag tag-pink">Warm Peach-Orange</span>
               <span class="tag tag-green">Lip Care</span>
             </div>
-            <div class="product-section"><h5>Formula &amp; Benefits</h5><ul>
+            <div class="shade-section"><div class="shade-section-header"><span class="shade-section-label">🎨 Shades</span><span class="shade-section-count">5 shades</span></div><div class="shade-swatches"><div class="shade-swatch owned"><div class="swatch-dot" style="background:#e8905a"></div><span class="swatch-name">Pumpkin Frost</span></div><div class="shade-swatch"><div class="swatch-dot" style="background:#e05870"></div><span class="swatch-name">Strawberry Glaze</span></div><div class="shade-swatch"><div class="swatch-dot" style="background:#c04878"></div><span class="swatch-name">Berry Soda</span></div><div class="shade-swatch"><div class="swatch-dot" style="background:#e8a870"></div><span class="swatch-name">Peach Pie</span></div><div class="shade-swatch"><div class="swatch-dot" style="background:#f0c8b0"></div><span class="swatch-name">Pearl Sparkle</span></div></div></div>
+          <div class="product-section"><h5>Formula &amp; Benefits</h5><ul>
               <li>Serum-type formula that treats lips while adding color</li>
               <li>Brightening complex lightens dark lips over continued use</li>
               <li>Pumpkin Frost is a warm peach-orange — flattering on warm and neutral undertones</li>
@@ -2010,7 +2106,8 @@ footer span{color:var(--accent)}
               <span class="tag tag-pink">Deep Cherry Red</span>
               <span class="tag tag-blue">Long-Lasting</span>
             </div>
-            <div class="product-section"><h5>Formula &amp; Benefits</h5><ul>
+            <div class="shade-section"><div class="shade-section-header"><span class="shade-section-label">🎨 Shades</span><span class="shade-section-count">22+ shades</span></div><div class="shade-swatches"><div class="shade-swatch"><div class="swatch-dot" style="background:#c84858"></div><span class="swatch-name">01 Calyptra</span></div><div class="shade-swatch"><div class="swatch-dot" style="background:#e07040"></div><span class="swatch-name">02 Solaris</span></div><div class="shade-swatch"><div class="swatch-dot" style="background:#d06070"></div><span class="swatch-name">03 Luxia</span></div><div class="shade-swatch owned"><div class="swatch-dot" style="background:#8c1830"></div><span class="swatch-name">04 Cherrion</span></div><div class="shade-swatch"><div class="swatch-dot" style="background:#b83060"></div><span class="swatch-name">05 Electra</span></div><div class="shade-swatch"><div class="swatch-dot" style="background:#d05080"></div><span class="swatch-name">06 Nerose</span></div><div class="shade-swatch"><div class="swatch-dot" style="background:#c03858"></div><span class="swatch-name">07 Quanta</span></div><div class="shade-swatch"><div class="swatch-dot" style="background:#a02848"></div><span class="swatch-name">08 Rubion</span></div><div class="shade-swatch"><div class="swatch-dot" style="background:#8a2060"></div><span class="swatch-name">09 Enigma</span></div><div class="shade-swatch"><div class="swatch-dot" style="background:#c84870"></div><span class="swatch-name">10 Axion</span></div><div class="shade-swatch"><div class="swatch-dot" style="background:#b85060"></div><span class="swatch-name">11 Futura</span></div><div class="shade-swatch"><div class="swatch-dot" style="background:#d06858"></div><span class="swatch-name">12 Pulse</span></div><div class="shade-swatch"><div class="swatch-dot" style="background:#983060"></div><span class="swatch-name">13 Berrion</span></div><div class="shade-swatch"><div class="swatch-dot" style="background:#c03050"></div><span class="swatch-name">14 Entropia</span></div><div class="shade-swatch"><div class="swatch-dot" style="background:#e06858"></div><span class="swatch-name">15 Aureon</span></div><div class="shade-swatch"><div class="swatch-dot" style="background:#a03848"></div><span class="swatch-name">16 Ares</span></div><div class="shade-swatch"><div class="swatch-dot" style="background:#c85878"></div><span class="swatch-name">17 Eros</span></div><div class="shade-swatch"><div class="swatch-dot" style="background:#a04040"></div><span class="swatch-name">18 Terra</span></div><div class="shade-swatch"><div class="swatch-dot" style="background:#e88070"></div><span class="swatch-name">001 Nova</span></div><div class="shade-swatch"><div class="swatch-dot" style="background:#d05058"></div><span class="swatch-name">002 Gemini</span></div><div class="shade-swatch"><div class="swatch-dot" style="background:#b04868"></div><span class="swatch-name">003 Lynn</span></div><div class="shade-swatch"><div class="swatch-dot" style="background:#9a4070"></div><span class="swatch-name">004 Mauvion</span></div></div></div>
+          <div class="product-section"><h5>Formula &amp; Benefits</h5><ul>
               <li>Staining formula dyes lips for all-day color that doesn't transfer</li>
               <li>Cherrion is a deep, rich cherry-red — bold and statement-making</li>
               <li>Subtle shimmer "Stellar Dust" soft-glow finish</li>
@@ -2035,7 +2132,7 @@ footer span{color:var(--accent)}
           <div class="product-card-left"><div class="product-emoji">🌷</div></div>
           <div class="product-card-right">
             <div class="product-card-top">
-              <div class="product-name">SOMETHINC Ceraplump Tinted Lip Balm SPF 25 PA+++</div>
+              <div class="product-name">SOMETHINC Ceraplump Tinted Lip Balm SPF 25 PA++++</div>
               <div class="product-type">Tinted Lip Balm with SPF</div>
             </div>
             <div class="tag-row">
@@ -2044,7 +2141,8 @@ footer span{color:var(--accent)}
               <span class="tag tag-gold">Warm Berry Rose</span>
               <span class="tag tag-blue">SPF 25 PA+++</span>
             </div>
-            <div class="size-row"><span class="size-label">Sizes:</span><span class="size-pill">~3.5 g — ~Rp85–120k</span></div>
+            <div class="shade-section"><div class="shade-section-header"><span class="shade-section-label">🎨 Shades</span><span class="shade-section-count">12 shades</span></div><div class="shade-swatches"><div class="shade-swatch"><div class="swatch-dot" style="background:#f0c8c8"></div><span class="swatch-name">01 Rabbit</span></div><div class="shade-swatch"><div class="swatch-dot" style="background:#f0a8a0"></div><span class="swatch-name">02 Sorbet</span></div><div class="shade-swatch"><div class="swatch-dot" style="background:#c88870"></div><span class="swatch-name">03 Pecan</span></div><div class="shade-swatch"><div class="swatch-dot" style="background:#e8b8a8"></div><span class="swatch-name">04 Lace</span></div><div class="shade-swatch"><div class="swatch-dot" style="background:#982840"></div><span class="swatch-name">05 Sangria</span></div><div class="shade-swatch owned"><div class="swatch-dot" style="background:#b84068"></div><span class="swatch-name">06 Valentine</span></div><div class="shade-swatch"><div class="swatch-dot" style="background:#e898a8"></div><span class="swatch-name">07 Ballet</span></div><div class="shade-swatch"><div class="swatch-dot" style="background:#d87890"></div><span class="swatch-name">08 Ribbon</span></div><div class="shade-swatch"><div class="swatch-dot" style="background:#f0b0c0"></div><span class="swatch-name">09 Sakura</span></div><div class="shade-swatch"><div class="swatch-dot" style="background:#8a5040"></div><span class="swatch-name">10 Walnut</span></div><div class="shade-swatch"><div class="swatch-dot" style="background:#703050"></div><span class="swatch-name">11 Raisin</span></div><div class="shade-swatch"><div class="swatch-dot" style="background:#c86080"></div><span class="swatch-name">12 Coquette</span></div></div></div>
+          <div class="size-row"><span class="size-label">Sizes:</span><span class="size-pill">~3.5 g — ~Rp85–120k</span></div>
             <div class="product-section"><h5>Key Ingredients</h5><ul>
               <li>Ceramides — replenishes and reinforces the lip's delicate moisture barrier</li>
               <li>Hyaluronic Acid — plumps and hydrates lips from within for a fuller appearance</li>
@@ -2090,7 +2188,8 @@ footer span{color:var(--accent)}
               <span class="tag tag-pink">Warm Peachy Glow</span>
               <span class="tag tag-green">Lip &amp; Multi-Use</span>
             </div>
-            <div class="product-section"><h5>Formula &amp; Benefits</h5><ul>
+            <div class="shade-section"><div class="shade-section-header"><span class="shade-section-label">🎨 Shades</span><span class="shade-section-count">2 shades</span></div><div class="shade-swatches"><div class="shade-swatch owned"><div class="swatch-dot" style="background:#f0a060"></div><span class="swatch-name">Marigold Peach</span></div><div class="shade-swatch"><div class="swatch-dot" style="background:#e87890"></div><span class="swatch-name">Rose Pink</span></div></div></div>
+          <div class="product-section"><h5>Formula &amp; Benefits</h5><ul>
               <li>Marigold extract — anti-inflammatory, brightening, and soothing for lip skin</li>
               <li>Peach-tinted glow oil adds a warm, sun-kissed tint and shine to lips</li>
               <li>Nourishing oil base deeply conditions and softens the lip area</li>
@@ -2442,7 +2541,7 @@ footer span{color:var(--accent)}
           <tr><td><strong>NPure Glow Up Oil</strong></td><td><span class="suit-good">✓ Maintenance only</span></td><td>AM final step</td><td><span class="suit-caution">⚠ Patch test first</span> — some oils can irritate sensitized skin types. Avoid reactive areas.</td></tr>
           <tr><td><strong>Glad2Glow Brightening Lip Serum</strong></td><td><span class="suit-ok">✓ All phases</span></td><td>AM/PM</td><td>Lips are generally less reactive than the face — safe at all phases.</td></tr>
           <tr><td><strong>Nivea Rich Care & Color</strong></td><td><span class="suit-ok">✓ All phases</span></td><td>AM/PM/Night</td><td>Deeply conditioning — excellent overnight lip treatment during all recovery phases.</td></tr>
-          <tr><td><strong>SOMETHINC Ceraplump Tinted Lip Balm SPF 25 PA+++</strong></td><td><span class="suit-ok">✓ Recovery + Maintenance</span></td><td>AM/PM (outdoors)</td><td>SPF 25 protects lips from UV daily. Ceramide formula is gentle — safe to introduce during recovery phase.</td></tr>
+          <tr><td><strong>SOMETHINC Ceraplump Tinted Lip Balm SPF 25 PA++++</strong></td><td><span class="suit-ok">✓ Recovery + Maintenance</span></td><td>AM/PM (outdoors)</td><td>SPF 25 protects lips from UV daily. Ceramide formula is gentle — safe to introduce during recovery phase.</td></tr>
           <tr><td><strong>Time Phoria Stellar Dust Lip Stain</strong></td><td><span class="suit-good">✓ Recovery + Maintenance</span></td><td>AM</td><td>Prep lips with Nivea balm first to prevent uneven staining on dry or irritated lips.</td></tr>
         </tbody>
       </table>
